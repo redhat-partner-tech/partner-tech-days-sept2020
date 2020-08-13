@@ -12,14 +12,14 @@ The intent is to enable Red Hat Business Partners with updates on our latest pro
 Week 1:
 |                                      | Monday | Tuesday | Wednesday (9/9)                                 | Thursday (9/10)                                          | Friday (9/11)                                                                 |
 |--------------------------------------|--------|---------|-------------------------------------------------|----------------------------------------------------------|-------------------------------------------------------------------------------|
-| 9:00–10:30am PST<br>12:00-1:30pm EST<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|        |         | Integrating Ansible Tower & Smart Management #1 | Automate Everything #1                                   |                                                                               |
+| 9:00–10:30am PST<br>12:00-1:30pm EST<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|        |         | Integrating Ansible Tower & Smart Management #1 | Automate<br>Everything #1                                   |                                                                               |
 | 10:30am-noon PST<br>1:30-3:00pm EST<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  |        |         | Simplifying AI/ML Adoption #1                   | Overview of Advanced Cluster Management for OpenShift #1 | Container & Virtualization Convergence: Exploring OpenShift Virtualization #1 |
 
 Week 2:
 |  	| Monday (9/14) 	| Tuesday (9/15) 	| Wednesday (9/16) 	| Thursday 	| Friday 	|
 |-	|-	|-	|-	|-	|-	|
 | 9:00–10:30am PST<br>12:00-1:30pm EST<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 	| Overview of Advanced Cluster Management for OpenShift #2 	|  	| Container & Virtualization Convergence: Exploring OpenShift Virtualization #2 	|  	|  	|
-| 10:30am-noon PST<br>1:30-3:00pm EST<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 	| Automate Everything #2 	| Integrating Ansible Tower & Smart Management #2 	| Simplifying AI/ML Adoption #2 	|  	|  	|
+| 10:30am-noon PST<br>1:30-3:00pm EST<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 	| Automate<br>Everything #2 	| Integrating Ansible Tower & Smart Management #2 	| Simplifying AI/ML<br> Adoption #2 	|  	|  	|
 
 
 ## Content
