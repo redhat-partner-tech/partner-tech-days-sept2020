@@ -3,7 +3,8 @@
 
 Greetings. This is the main page for Red Hat Partner Tech Days - September 2020. Unlike previous RHPTD's the Sept 2020 edition will be delivered as a multi-day virtual event. Target audience is North America with the main landing/registration page located here:
 
-https://redhat-events.com/PartnerTraining/workshops
+[Red Hat Partner Tech Days - Sept 2020](https://events.redhat.com/profile/web/index.cfm?PKwebID=0x51871abcd)
+
 
 The intent is to enable Red Hat Business Partners with updates on our latest products/solutions and deliver capabilities through demos and self-paced open labs.  
 
