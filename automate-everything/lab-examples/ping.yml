@@ -1,6 +1,6 @@
 ---
 - name: ping my lab
-  hosts: all
+  hosts: f5 web node3 node4
   gather_facts: false
 
   tasks:
