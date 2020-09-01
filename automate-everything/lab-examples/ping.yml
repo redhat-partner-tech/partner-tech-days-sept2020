@@ -1,5 +1,6 @@
 ---
 - name: ping my lab
+  hosts: web
   gather_facts: false
 
   tasks:
