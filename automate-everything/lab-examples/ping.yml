@@ -1,0 +1,7 @@
+---
+- name: ping my lab
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - ping:
