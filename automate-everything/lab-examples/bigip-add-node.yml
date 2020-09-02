@@ -15,4 +15,4 @@
         server_port: 8443
         validate_certs: false
       host: 1.2.3.4
-      name: test1
+      name: '{{ my_hostname }}'
