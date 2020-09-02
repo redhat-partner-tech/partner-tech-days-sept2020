@@ -7,3 +7,8 @@
     yum:
       name: httpd
       state: latest
+  - name: Apache enabled and running
+    service:
+      name: httpd
+      enabled: true
+      state: started
