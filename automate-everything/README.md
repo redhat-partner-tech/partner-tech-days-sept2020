@@ -2,9 +2,11 @@
 Automate Everything
 ---------------------------------------------------------------------
 
-Ansible is a radically simple IT automation engine that automates cloud provisioning, configuration management, application deployment, intra-service orchestration, and many other IT needs.
+Ansible is a radically simple IT automation engine that automates cloud provisioning, configuration management, application deployment, intra-service orchestration, and many other IT needs. 
 
-**Red Hat Ansible Automation Platform, currently consists of:**
+Announced at [Red Hat Summit 2020](https://www.redhat.com/en/summit), Ansible Automation Platform, harnesses the power of Ansible automation + new modules/functionality, Ansible Cloud Services and the latest Ansible Tower updates, all under one roof, one subscription - one platform.
+
+**[Red Hat Ansible Automation Platform](https://www.ansible.com/blog/the-latest-in-red-hat-ansible-automation-platform), consists of:**
 - [Ansible Tower](https://www.ansible.com/products/tower)
 - [Ansible Engine](https://www.ansible.com/products/engine)
 - Ansible Cloud Services
@@ -19,5 +21,6 @@ Ansible is a radically simple IT automation engine that automates cloud provisio
 - Demo: Ansible Tower & Ansible Cloud Services Walkthrough
 - Lab: It will take approximately 45 mins to complete. Lab doc [here]
 
+Kudos to [Arief Winata](<fake@example.com>), Bart Zhang<fake@example.com>, Tommy Burke<fake@example.com> and Mike Watkins<fake@example.com> for creating this content
 
 
