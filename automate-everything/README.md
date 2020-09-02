@@ -16,10 +16,10 @@ Announced at [Red Hat Summit 2020](https://www.redhat.com/en/summit), Ansible Au
     - [Ansible Collections](https://www.ansible.com/blog/hands-on-with-ansible-collections)
 
 
-**Notes (Please read):**
-- Presentation: Partner Tech Days - Automate Everything Q3-2020.pdf
-- Demo: Ansible Tower & Ansible Cloud Services Walkthrough
-- Lab: It will take approximately 45 mins to complete. Lab doc [here]
+**Content:**
+- **Presentation:** Partner Tech Days - Automate Everything Q3-2020.pdf
+- **Demo:** Ansible Tower & Ansible Cloud Services Walkthrough
+- **Lab:** It will take approximately 45 mins to complete. Lab doc [here]
 
 Kudos to Arief Winata, Bart Zhang, Tommy Burke and Mike Watkins for creating this content
 
