@@ -1,0 +1,12 @@
+---
+
+- name: Network Ping
+  connection: local
+  gather_facts: false
+  hosts: all
+  tasks:
+  
+  - name: Test reachability
+    net_ping:
+      dest: 8.8.8.8
+  
