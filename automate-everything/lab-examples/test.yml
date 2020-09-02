@@ -1,33 +1,30 @@
 ---
-- name: Apache server installed
-  hosts: web
+- name: GRAB F5 FACTS
+  hosts: f5
+  connection: local
+  gather_facts: false
 
   tasks:
-  - name: latest Apache version installed
-    yum:
-      name: httpd
-      state: latest
+    - name: COLLECT BIG-IP FACTS
+      bigip_device_facts:
+        gather_subset:
+          - system-info
+        provider:
+          server: "{{private_ip}}"
+          user: "{{ansible_user}}"
+          password: "{{ansible_ssh_pass}}"
+          server_port: 8443
+          validate_certs: false
+      register: device_facts
 
-  - name: latest firewalld version installed
-    yum:
-      name: firewalld
-      state: latest
+    - name: DISPLAY COMPLETE BIG-IP SYSTEM INFORMATION
+      debug:
+        var: device_facts
 
-  - name: firewalld enabled and running
-    service:
-      name: firewalld
-      enabled: true
-      state: started
+    - name: DISPLAY ONLY THE MAC ADDRESS
+      debug:
+        var: device_facts['system_info']['base_mac_address']
 
-  - name: firewalld permits http service
-    firewalld:
-      service: http
-      permanent: true
-      state: enabled
-      immediate: yes
-
-  - name: Apache enabled and running
-    service:
-      name: httpd
-      enabled: true
-      state: started
+    - name: DISPLAY ONLY THE VERSION
+      debug:
+        var: device_facts['system_info']['product_version']
