@@ -21,6 +21,5 @@ Announced at [Red Hat Summit 2020](https://www.redhat.com/en/summit), Ansible Au
 - Demo: Ansible Tower & Ansible Cloud Services Walkthrough
 - Lab: It will take approximately 45 mins to complete. Lab doc [here]
 
-Kudos to [Arief Winata](<fake@example.com>), Bart Zhang<fake@example.com>, Tommy Burke<fake@example.com> and Mike Watkins<fake@example.com> for creating this content
-
+Kudos to Arief Winata, Bart Zhang, Tommy Burke and Mike Watkins for creating this content
 
