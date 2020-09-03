@@ -1,0 +1,35 @@
+---
+# region where the nodes will live
+ec2_region: us-east-1
+
+# name prefix for all the VMs
+ec2_name_prefix: rh24
+
+# creates student_total of workbenches for the workshop
+student_total: 1
+
+# Set the right workshop type, like network, rhel or f5 (see above)
+workshop_type: f5
+
+#####OPTIONAL VARIABLES
+
+# turn DNS on for control nodes, and set to type in valid_dns_type
+dns_type: aws
+
+# password for Ansible control node
+admin_password: ansible890
+
+# creates AWS S3 website for ec2_name_prefix.workshop_dns_zone
+# this is defaulted to on as of May 13th, 2020
+create_login_page: true
+
+# Sets the Route53 DNS zone to use for the S3 website
+workshop_dns_zone: your.domain.com
+
+# automatically installs Tower to control node
+towerinstall: true
+
+# IBM Community Grid - defaults to true if you don't tell the provisioner
+ibm_community_grid: false
+
+create_cluster: false

@@ -1,0 +1,12 @@
+{
+    "company_name": "Red Hat",
+    "contact_email": "arwinata@redhat.com",
+    "contact_name": "Arief Winata",
+    "hostname": "2e601468062832eca4c2da875babbfe9",
+    "instance_count": 5
+    "license_date": 1594721517,
+    "license_key": "1ab0a2dfcdd83b1162601234fa06566e258e0c1d99999c47578c5d9e892d1f8e",
+    "license_type": "enterprise",
+    "subscription_name": "Red Hat Ansible Tower, Standard (10 Managed Nodes) Trial",
+    "trial": true
+}
