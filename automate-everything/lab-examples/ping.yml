@@ -1,0 +1,6 @@
+---
+- name: Ping a node
+  hosts: '{{ my_hostname }}'
+  gather_facts: false
+  tasks:
+  - action: ping
