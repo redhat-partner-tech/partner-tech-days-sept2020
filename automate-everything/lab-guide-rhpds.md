@@ -100,7 +100,8 @@ Objective: A quick introduction to Ansible command line for students with no exp
 
 Login to your Ansible Control Node via SSH as student1 as per the instruction in Section 1. And navigate to the home directory.
 
-[student1@ansible ~]$
+```[student1@ansible ~]$
+```
 
 #### Step 2
 
