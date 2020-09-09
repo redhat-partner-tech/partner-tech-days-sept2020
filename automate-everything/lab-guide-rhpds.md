@@ -291,9 +291,10 @@ Finally let's append two more tasks to get more specific info from facts gathere
 - name: DISPLAY ONLY THE VERSION
       debug:
         var: device_facts['system_info']['product_version']
+```
+
 -   var: device_facts['system_info']['base_mac_address'] displays the MAC address for the Management IP on the BIG-IP device
 -   device_facts['system_info']['product_version'] displays the product version BIG-IP device
-```
 
 Because the bigip_device_info module returns useful information in structured data, it is really easy to grab specific information without using regex or filters. Fact modules are very powerful tools to grab specific device information that can be used in subsequent tasks, or even used to create dynamic documentation (reports, csv files, markdown).
 
