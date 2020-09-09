@@ -1,6 +1,6 @@
 # Section 4 : Ansible Tower Basics
 
-Objective: To prepare for the lab exercises in Section 4, in this section we will cover the fundamentals of Ansible Tower.
+Objective: In this section, we will cover the fundamentals of Ansible Tower: Users, Inventories, Credentials & Projects
 
 **Ansible Tower Users**
 
