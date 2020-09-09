@@ -1,4 +1,4 @@
-# Section 2 : Exploring the lab environment
+# Section 2 : Exploring the lab environment with Ansible Engine
 
 Objective: A quick introduction to Ansible command line for students with no experience with Ansible. Those with prior knowledge of Ansible might breeze through this section.
 
