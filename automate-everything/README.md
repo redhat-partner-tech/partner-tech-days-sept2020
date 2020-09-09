@@ -25,7 +25,7 @@ Announced at [Red Hat Summit 2020](https://www.redhat.com/en/summit), Ansible Au
    - If you don't have access to RHPDS:
       - Register for a redhat.com and Red Hat Partner Connect account - [Instructions](https://connect.redhat.com/en/support)
       - Request access to Red Hat Product Demo System (RHPDS) - [Instructions](https://rhpds.redhat.com/)
-          - Note: RHPDS is for Advanved & Premier Business Partners or via approval
+          - Note: RHPDS is for Advanced & Premier Business Partners or via approval
    
 
 *Kudos to Arief Winata, Bart Zhang, Mike Watkins for creating this content*
