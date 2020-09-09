@@ -20,31 +20,22 @@ There are three types of Tower Users:
 #### Step 1 - Create User
 
 
-Let's create a user:
-
-In the Tower menu under ACCESS click Users
+In the Tower menu under ACCESS click Users (reference your email from RHPDS with Workshop: Workbench login info for student1)
 
 Click the green plus button
 
 Fill in the values for the new user:
 
-**Parameter**  **Value**
-
-FIRST NAME  Peter
-
-LAST NAME  Parker
-
-Organization  Default
-
-EMAIL  wweb@example.com
-
-USERNAME  webdev1
-
-PASSWORD  ansible123
-
-CONFIRM PASSWORD  ansible123
-
-USER TYPE  Normal User
+| Parameter 	| Value 	|
+|-	|-	|
+| First Name 	| Peter 	|
+| Last Name 	| Parker 	|
+| Organization 	| Default 	|
+| Email 	| wweb@example.com 	|
+| Username 	| webdav1 	|
+| Password 	| ansible123 	|
+| Confirm Password 	| ansible123 	|
+| User Type 	| Normal User 	|
 
 Click SAVE
 
