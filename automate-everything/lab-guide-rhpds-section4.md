@@ -77,7 +77,9 @@ https://github.com/redhat-partner-tech/partner-tech-days-sept2020
 
 To configure and use this repository as a Source Control Management (SCM) system in Tower you have to create a Project that uses the repository
 
-Go to RESOURCES → Projects in the side menu view click the green + button. Fill in the form:
+In the Tower menu, go to RESOURCES → Projects. Then, click the green plus button. 
+
+Fill in the form:
 
 | Parameter 	| Value 	|
 |-	|-	|
