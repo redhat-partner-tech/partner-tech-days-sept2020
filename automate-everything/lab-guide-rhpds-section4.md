@@ -10,14 +10,14 @@ Ansible Tower has a built-in Role Based Access Control (RBAC). For the purpose o
 
 There are three types of Tower Users:
 
-**Normal User:** Have read and write access limited to the inventory and projects for which that user has been granted the appropriate roles and privileges.
+**- Normal User:** Have read and write access limited to the inventory and projects for which that user has been granted the appropriate roles and privileges.
 
-**System Auditor:** Auditors implicitly inherit the read-only capability for all objects within the Tower environment.
+**- System Auditor:** Auditors implicitly inherit the read-only capability for all objects within the Tower environment.
 
-**System Administrator:** Has admin, read, and write privileges over the entire Tower installation.
+**- System Administrator:** Has admin, read, and write privileges over the entire Tower installation.
 
 
-#### Step 1 
+#### Step 1 - Create User
 
 
 Let's create a user:
