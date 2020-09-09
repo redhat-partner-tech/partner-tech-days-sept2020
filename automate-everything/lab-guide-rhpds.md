@@ -32,7 +32,7 @@ Objective: In this section we will create a small scale orchestration where:
 
 -   If all goes well, the new web server will then be added to the load balancer pool
 
-#### Section 1 : Standing up the lab environment in RHPDS
+# Section 1 : Standing up the lab environment in RHPDS
 
 Objective: We will be using a modified version of the Ansible F5 Automation workshop in RHPDS for the exercises, let's set it up.
 
@@ -90,7 +90,7 @@ Scroll down to the bottom and click on student1 under Workbench Information to s
 
 By now your lab is ready to use for the exercises in this lab guide. Please make sure to follow only the exercise instructions in this lab guide, and *not* the one on the web link (example above [http://f544.open.redhat.com](http://4fb0.open.redhat.com/)) you receive from RHPDS. 
 
-#### Section 2 : Exploring the lab environment
+# Section 2 : Exploring the lab environment
 
 Objective: A quick introduction to Ansible command line for students with no experience with Ansible. Those with prior knowledge of Ansible might breeze through this section.
 
@@ -207,7 +207,7 @@ Go back to the home directory, all the following exercises will be performed in 
 ```
 
 
-#### Section 3 : Quick intro to F5 Load Balancer
+# Section 3 : Quick intro to F5 Load Balancer
 
 Objective: To cover the basics of a load balancer, in this case an F5 BigIP is used as an example of a load balancer and a network device that Ansible can control and automate.
 
@@ -888,7 +888,7 @@ Instead of using a browser window it is also possible to use the command line on
 
 As the final step in this section, let's remove node2 from F5 so that we can use it for the exercises in Section 5. To do this, please use the F5 web interface, go to the Local Traffic -> Nodes menu, and choose node2 and hit the Delete button.
 
-#### Section 4 : Users, Inventories, Credentials, Projects
+# Section 4 : Users, Inventories, Credentials, Projects
 
 Objective: To prepare for the lab exercises in Section 4, in this section we will cover the fundamentals of Ansible Tower.
 
@@ -1076,7 +1076,7 @@ The new Project will be synced automatically after creation. But you can also do
 
 After starting the sync job, go to the Jobs view: there is a new job for the update of the Git repository.
 
-#### Section 5 : Users, Inventories, Credentials, Projects
+# Section 5 : Users, Inventories, Credentials, Projects
 
 Objective: In this section we will create a small scale orchestration where:
 
