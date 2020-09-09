@@ -23,7 +23,5 @@ Week 2:
 | 10:30am-noon PST<br>1:30-3:00pm EST<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 	| Automate<br>Everything #2 	| Integrating Ansible Tower & Smart Management #2 	| Simplifying AI/ML<br> Adoption #2 	|  	|  	|
 
 
-## Content
 
-TBD
 
