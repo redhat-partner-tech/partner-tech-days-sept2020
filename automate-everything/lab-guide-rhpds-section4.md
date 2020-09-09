@@ -10,11 +10,9 @@ Ansible Tower has a built-in Role Based Access Control (RBAC). For the purpose o
 
 There are three types of Tower Users:
 
-**- Normal User:** Have read and write access limited to the inventory and projects for which that user has been granted the appropriate roles and privileges.
-
-**- System Auditor:** Auditors implicitly inherit the read-only capability for all objects within the Tower environment.
-
-**- System Administrator:** Has admin, read, and write privileges over the entire Tower installation.
+* **Normal User:** Have read and write access limited to the inventory and projects for which that user has been granted the appropriate roles and privileges.
+* **System Auditor:** Auditors implicitly inherit the read-only capability for all objects within the Tower environment.
+* **System Administrator:** Has admin, read, and write privileges over the entire Tower installation.
 
 
 #### Step 1 - Create User
@@ -41,9 +39,9 @@ Click SAVE
 
 ![](https://lh4.googleusercontent.com/Wy2t7vQf8sUquxu4omf9z8Df7TsXfVKyrALPzYf2eTNqgnQyQq79CON4I96GrZoB4OIb3OtZOh96OYg6LjeQ5xRt-p48aakh5ANllSmWKU57Y7wEKkr_VreMA9gyzb92TZZ4A3-f)
 
-**Inventories**
+#### Step 2 - Inventories
 
-This is the equivalent of an inventory file in Ansible Engine. There is a lot more to it (like dynamic inventories) but let's start with the basics. There will be one inventory, the Workshop Inventory. Click the Workshop Inventory then click the Hosts button.
+This is the equivalent of an inventory file in Ansible Engine. There is a lot more to it (like dynamic inventories) but let's start with the basics. In the Tower menu under RESOURCES click Inventories. There will be one inventory, the Workshop Inventory. Click the Workshop Inventory then click the [Hosts] button.
 
 The inventory information at ~/lab_inventory/hosts was pre-loaded into the Ansible Tower Inventory as part of the provisioning process.
 
