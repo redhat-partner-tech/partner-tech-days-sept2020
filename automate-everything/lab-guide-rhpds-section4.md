@@ -49,52 +49,23 @@ Example:
 
 ![](https://lh3.googleusercontent.com/YdT0ONWJ56KfW9BvOVOcJGIHf_DzqIN0DJFvdFImKUuzB7qkh8boRySGBRnVZtr5qklbhsOeC_Q_PcLkf6P0hXkKEgNA4RuIWFaCXMQN9QZoWiPjBUE9y5jokCApRRWf2x0VMMhA)
 
-**Credentials**
+#### Step 3 - Credentials
 
 Now we will examine the credentials to access our managed hosts from Tower. As part of the provisioning process for this Ansible Workshop the Workshop Credential has already been setup.
 
-In the RESOURCES menu choose Credentials. Now click on the Workshop Credential.
+In the Tower menu under RESOURCES choose Credentials. Now click on the Workshop Credential.
 
 Note the following information:
 
-|
+| Parameter 	| Value 	|
+|-	|-	|
+| Credential Type 	| Machine- Machine credentials define ssh and user-level privilege escalation access for playbooks. They are used when submitting jobs to run playbooks on a remote host. 	|
+| username 	| ec2-user which matches our command-line Ansible inventory username for the other linux nodes 	|
+| SSH PRIVATE KEY 	| ENCRYPTED - take note that you can't actually examine the SSH private key once someone hands it over to Ansible Tower 	|
 
-Parameter
 
- |
+#### Step 4 - Projects
 
-Value
-
- |
-|
-
-Credential Type
-
- |
-
-Machine- Machine credentials define ssh and user-level privilege escalation access for playbooks. They are used when submitting jobs to run playbooks on a remote host.
-
- |
-|
-
-username
-
- |
-
-ec2-user which matches our command-line Ansible inventory username for the other linux nodes
-
- |
-|
-
-SSH PRIVATE KEY
-
- |
-
-ENCRYPTED - take note that you can't actually examine the SSH private key once someone hands it over to Ansible Tower
-
- |
-
-**Projects**
 
 An Ansible Tower Project is a logical collection of Ansible Playbooks. You can manage your playbooks by placing them into a source code management (SCM) system supported by Tower, including Git, Subversion, and Mercurial.
 
