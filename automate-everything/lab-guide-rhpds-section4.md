@@ -4,7 +4,7 @@ Objective: To prepare for the lab exercises in Section 4, in this section we wil
 
 Ansible Tower Users
 
-In Section 1 we learned a little bit about Ansible Engine, which is the actual command line (executables) of Ansible. As you saw in the exercises, you needed to login to the actual control node via ssh. This means if you need to give another user permission to use the control node, you need to give that person an ssh (shell) access. This is not preferred since it's less secure, tedious to manage, and not scalable.
+In Section 2 we learned a little bit about Ansible Engine, which is the actual command line (executables) of Ansible. As you saw in the exercises, you needed to login to the actual control node via ssh. This means if you need to give another user permission to use the control node, you need to give that person an ssh (shell) access. This is not preferred since it's less secure, tedious to manage, and not scalable.
 
 Ansible Tower has a built-in Role Based Access Control (RBAC). For the purpose of this lab, we will use the built in authentication system.
 
