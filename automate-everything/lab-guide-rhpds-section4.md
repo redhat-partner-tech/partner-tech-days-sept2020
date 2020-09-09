@@ -64,6 +64,8 @@ Note the following information:
 | SSH PRIVATE KEY 	| ENCRYPTED - take note that you can't actually examine the SSH private key once someone hands it over to Ansible Tower 	|
 
 
+
+
 #### Step 4 - Projects
 
 
@@ -77,72 +79,22 @@ To configure and use this repository as a Source Control Management (SCM) system
 
 Go to RESOURCES → Projects in the side menu view click the green + button. Fill in the form:
 
-|
+| Parameter 	| Value 	|
+|-	|-	|
+| Name 	| Tech Day Project 	|
+| Organization 	| Default 	|
+| SCM Type 	| Git 	|
 
-Parameter
 
- |
 
-Value
-
- |
-|
-
-NAME
-
- |
-
-Tech Day Project
-
- |
-|
-
-ORGANIZATION
-
- |
-
-Default
-
- |
-|
-
-SCM TYPE
-
- |
-
-Git
-
- |
 
 Now you need the URL to access the repo. Go to the Github repository mentioned above, choose the green Clone or download button on the right, click on Use https and copy the HTTPS URL. Enter the URL into the Project configuration:
 
-|
 
-Parameter
-
- |
-
-Value
-
- |
-|
-
-SCM URL
-
- |
-
-https://github.com/redhat-partner-tech/partner-tech-days-sept2020
-
- |
-|
-
-SCM UPDATE OPTIONS
-
- |
-
-Tick the first three boxes to always get a fresh copy of the repository and to update the repository when launching a job
-
- |
+| Parameter 	| Value 	|
+|-	|-	|
+| SCM URL 	| https://github.com/redhat-partner-tech/partner-tech-days-sept2020 	|
+| SCM Update Options 	| Tick the first three boxes to always get a fresh copy of the repository and to update the repository when launching a job 	|
 
 Click SAVE
 
