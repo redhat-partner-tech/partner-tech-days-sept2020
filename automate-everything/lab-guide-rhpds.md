@@ -1,4 +1,4 @@
-#### LAB GUIDE - Ansible on RHPDS
+# LAB GUIDE - Ansible on RHPDS
 
 #### Section 1 : Standing up the lab environment
 
