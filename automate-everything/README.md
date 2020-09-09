@@ -21,10 +21,12 @@ Announced at [Red Hat Summit 2020](https://www.redhat.com/en/summit), Ansible Au
 **Content:**
 - **Presentation:** Partner Tech Days - Automate Everything Q3-2020.pdf
 - **Demo:** Ansible Tower & Ansible Cloud Services Walkthrough
-- **Lab:** It will take approximately 45 mins to complete. Lab doc [here]
-
+- **Lab:** RHPDS: Load Balancer, Workflow/Orchestration. Plus, AWS Provisioner
+   - If you don't have access to RHPDS:
+      - Register for a redhat.com and Red Hat Partner Connect account - [Instructions](https://connect.redhat.com/en/support)
+      - Request access to Red Hat Product Demo System (RHPDS) - [Instructions](https://rhpds.redhat.com/)
+          - Note: RHPDS is for Advanved & Premier Business Partners or via approval
    
-   
 
-*Kudos to Arief Winata, Bart Zhang, Tommy Burke and Mike Watkins for creating this content*
+*Kudos to Arief Winata, Bart Zhang, Mike Watkins for creating this content*
 
