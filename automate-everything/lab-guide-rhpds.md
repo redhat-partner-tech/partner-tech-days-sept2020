@@ -110,20 +110,13 @@ Run the ansible command with the --version command to look at what is configured
 
 ```
 [student1@ansible ~]$ ansible --version
-
 ansible 2.6.2
-
   config file = /home/student1/.ansible.cfg
-
   configured module search path = [u'/home/student1/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
-
   ansible python module location = /usr/lib/python2.7/site-packages/ansible
-
   executable location = /usr/bin/ansible
-
   python version = 2.7.5 (default, May  3 2017, 07:55:04) [GCC 4.8.5 20150623 (Red Hat 4.8.5-14)]
 ```
-
 
 Note: The Ansible version you see might differ from the above output
 
@@ -135,32 +128,19 @@ Use the cat command to view the contents of the ansible.cfg file.
 
 ```
 [student1@ansible ~]$ cat ~/.ansible.cfg
-
 [defaults]
-
 stdout_callback = yaml
-
 connection = smart
-
 timeout = 60
-
 deprecation_warnings = False
-
 host_key_checking = False
-
 retry_files_enabled = False
-
 inventory = /home/student1/lab_inventory/hosts
-
 [persistent_connection]
-
 connect_timeout = 200
-
 command_timeout = 200
-
 [student1@ansible ~]$
 ```
-
 
 Note the following parameters within the ansible.cfg file:
 
@@ -181,28 +161,20 @@ The output will look as follows with student1 being the respective student workb
 
 ```
 [all:vars]
-
 ansible_user=student1
-
 ansible_ssh_pass=skfE9PXk41hgMs
-
 ansible_port=22
 
 [lb]
-
 f5 ansible_host=3.235.9.14 ansible_user=admin private_ip=172.16.135.2 ansible_ssh_pass=skfE9PXk41hgMs
 
 [control]
-
 ansible ansible_host=3.237.237.173 ansible_user=ec2-user private_ip=172.16.98.96
 
 [web]
-
 node1 ansible_host=100.24.107.157 ansible_user=ec2-user private_ip=172.16.36.182
-
 node2 ansible_host=3.235.57.122 ansible_user=ec2-user private_ip=172.16.150.46
 ```
-
 
 Note that the IP addresses will be different in your environment.
 
@@ -243,7 +215,9 @@ Objective: To cover the basics of a load balancer, in this case an F5 BigIP is u
 
 Using your text editor of choice create a new file called bigip-facts.yml.
 
+```
 [student1@ansible ~]$ nano bigip-facts.yml
+```
 
 vim and nano are available on the control node, as well as Visual Studio
 
@@ -251,15 +225,13 @@ Ansible playbooks are YAML files. YAML is a structured encoding format that is a
 
 Enter the following play definition into bigip-facts.yml:
 
+```
 ---
-
 - name: GRAB F5 FACTS
-
   hosts: f5
-
   connection: local
-
   gather_facts: no
+```
 
 -   The --- at the top of the file indicates that this is a YAML file.
 
@@ -271,81 +243,57 @@ Enter the following play definition into bigip-facts.yml:
 
 Next, add the first task. This task will use the bigip_device_info module to grab useful information from the BIG-IP device.
 
+```
  tasks:
-
 - name: COLLECT BIG-IP FACTS
-
       bigip_device_info:
-
         gather_subset:
-
 - system-info
-
         provider:
-
           server: "{{private_ip}}"
-
           user: "{{ansible_user}}"
-
           password: "{{ansible_ssh_pass}}"
-
           server_port: 8443
-
           validate_certs: no
-
       register: device_facts
+```
 
 A play is a list of tasks. Tasks and modules have a 1:1 correlation. Ansible modules are reusable, standalone scripts that can be used by the Ansible API, or by the ansible or ansible-playbook programs. They return information to ansible by printing a JSON string to stdout before exiting.
 
 -   name: COLLECT BIG-IP FACTS is a user defined description that will display in the terminal output.
-
 -   bigip_device_info: tells the task which module to use. Everything except register is a module parameter defined on the module documentation page.
-
 -   The gather_subset: system_info parameter tells the module only to grab system level information.
-
 -   The provider: parameter is a group of connection details for the BIG-IP.
-
 -   The server: "{{private_ip}}" parameter tells the module to connect to the F5 BIG-IP IP address, which is stored as a variable private_ip in inventory
-
 -   The user: "{{ansible_user}}" parameter tells the module the username to login to the F5 BIG-IP device with
-
 -   Thepassword: "{{ansible_ssh_pass}}" parameter tells the module the password to login to the F5 BIG-IP device with
-
 -   The server_port: 8443 parameter tells the module the port to connect to the F5 BIG-IP device with. 8443 is what's being used in this lab, but could be different depending on the deployment.
-
 -   register: device_facts tells the task to save the output to a variable bigip_device_info
 
 Next, append the second task to above . This task will use the debug module to print the output from device_facts variable we registered the facts to.
 
+```
 - name: DISPLAY COMPLETE BIG-IP SYSTEM INFORMATION
-
       debug:
-
         var: device_facts
+```
 
 -   The name: COMPLETE BIG-IP SYSTEM INFORMATION is a user defined description that will display in the terminal output.
-
 -   debug: tells the task to use the debug module.
-
 -   The var: device_facts parameter tells the module to display the variable bigip_device_info.
 
 Finally let's append two more tasks to get more specific info from facts gathered, to the above playbook.
 
+```
 - name: DISPLAY ONLY THE MAC ADDRESS
-
       debug:
-
         var: device_facts['system_info']['base_mac_address']
-
 - name: DISPLAY ONLY THE VERSION
-
       debug:
-
         var: device_facts['system_info']['product_version']
-
 -   var: device_facts['system_info']['base_mac_address'] displays the MAC address for the Management IP on the BIG-IP device
-
 -   device_facts['system_info']['product_version'] displays the product version BIG-IP device
+```
 
 Because the bigip_device_info module returns useful information in structured data, it is really easy to grab specific information without using regex or filters. Fact modules are very powerful tools to grab specific device information that can be used in subsequent tasks, or even used to create dynamic documentation (reports, csv files, markdown).
 
