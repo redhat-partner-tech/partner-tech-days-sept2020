@@ -16,6 +16,10 @@ There are three types of Tower Users:
 
 **System Administrator:** Has admin, read, and write privileges over the entire Tower installation.
 
+
+#### Step 1 
+
+
 Let's create a user:
 
 In the Tower menu under ACCESS click Users
