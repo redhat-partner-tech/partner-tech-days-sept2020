@@ -108,6 +108,7 @@ Login to your Ansible Control Node via SSH as student1 as per the instruction in
 
 Run the ansible command with the --version command to look at what is configured:
 
+```
 [student1@ansible ~]$ ansible --version
 
 ansible 2.6.2
@@ -121,6 +122,8 @@ ansible 2.6.2
   executable location = /usr/bin/ansible
 
   python version = 2.7.5 (default, May  3 2017, 07:55:04) [GCC 4.8.5 20150623 (Red Hat 4.8.5-14)]
+```
+
 
 Note: The Ansible version you see might differ from the above output
 
@@ -130,6 +133,7 @@ This command gives you information about the version of Ansible, location of the
 
 Use the cat command to view the contents of the ansible.cfg file.
 
+```
 [student1@ansible ~]$ cat ~/.ansible.cfg
 
 [defaults]
@@ -155,6 +159,8 @@ connect_timeout = 200
 command_timeout = 200
 
 [student1@ansible ~]$
+```
+
 
 Note the following parameters within the ansible.cfg file:
 
@@ -166,10 +172,14 @@ The scope of a play within a playbook is limited to the groups of hosts declared
 
 In this lab you will work with a file based inventory written in the ini format. Use the cat command to view the contents of your inventory:
 
+```
 [student1@ansible ~]$ cat ~/lab_inventory/hosts
+```
+
 
 The output will look as follows with student1 being the respective student workbench:
 
+```
 [all:vars]
 
 ansible_user=student1
@@ -191,6 +201,8 @@ ansible ansible_host=3.237.237.173 ansible_user=ec2-user private_ip=172.16.98.96
 node1 ansible_host=100.24.107.157 ansible_user=ec2-user private_ip=172.16.36.182
 
 node2 ansible_host=3.235.57.122 ansible_user=ec2-user private_ip=172.16.150.46
+```
+
 
 Note that the IP addresses will be different in your environment.
 
@@ -218,7 +230,10 @@ Does the password have to be in plain text? No, Red Hat Ansible Tower can take c
 
 Go back to the home directory, all the following exercises will be performed in the home directory.
 
+```
 [student1@ansible ~]$ cd ~
+```
+
 
 #### Section 3 : Quick intro to F5 Load Balancer
 
