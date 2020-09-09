@@ -886,7 +886,14 @@ Instead of using a browser window it is also possible to use the command line on
 
     <p>F5TEST-studentX-node1</p>
 
-As the final step in this section, let's remove node2 from F5 so that we can use it for the exercises in Section 5. To do this, please use the F5 web interface, go to the Local Traffic -> Nodes menu, and choose node2 and hit the Delete button.
+
+As the final step in this section, let’s remove node2 from F5 so that we can use it for the exercises in Section 5. To do this, please use the F5 web interface:
+1. Go to Local Traffic → Pools → Members
+2. Click on node2, then [Remove]
+3. Local Traffic → Nodes 
+4. Click on node2, then [Delete]. Confirm Delete
+
+
 
 # Section 4 : Users, Inventories, Credentials, Projects
 
