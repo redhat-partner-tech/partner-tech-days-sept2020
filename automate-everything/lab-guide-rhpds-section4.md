@@ -77,7 +77,7 @@ https://github.com/redhat-partner-tech/partner-tech-days-sept2020
 
 To configure and use this repository as a Source Control Management (SCM) system in Tower you have to create a Project that uses the repository
 
-In the Tower menu, go to RESOURCES → Projects. Then, click the green plus button. 
+In the Tower menu, go to RESOURCES > Projects. Then, click the green plus button. 
 
 Fill in the form:
 
@@ -90,7 +90,7 @@ Fill in the form:
 
 
 
-Now you need the URL to access the repo. Go to the Github repository mentioned above, choose the green Clone or download button on the right, click on Use https and copy the HTTPS URL. Enter the URL into the Project configuration:
+Now you need the SCM URL to access the repo. Go to the Github repository mentioned above, click the green [Code] or download button, click 'Clipboard button' under **Clone with HTTPS**. Enter the URL into Source Details > SCM URL:
 
 
 | Parameter 	| Value 	|
@@ -100,6 +100,6 @@ Now you need the URL to access the repo. Go to the Github repository mentioned a
 
 Click SAVE
 
-The new Project will be synced automatically after creation. But you can also do this manually: Sync the Project again with the Git repository by going to the Projects view and clicking the circular arrow Get latest SCM revision icon to the right of the Project.
+The new Project will be synced automatically after creation (you will also see it added at the bottom of the page). But, you can also do this manually as well: Sync the Project again with the Git repository by going to the Projects view and clicking the circular arrow 'Get latest SCM revision' icon to the right of the Project.
 
 After starting the sync job, go to the Jobs view: there is a new job for the update of the Git repository.
