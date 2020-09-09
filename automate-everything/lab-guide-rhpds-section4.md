@@ -2,7 +2,7 @@
 
 Objective: To prepare for the lab exercises in Section 4, in this section we will cover the fundamentals of Ansible Tower.
 
-Ansible Tower Users
+**Ansible Tower Users**
 
 In Section 2 we learned a little bit about Ansible Engine, which is the actual command line (executables) of Ansible. As you saw in the exercises, you needed to login to the actual control node via ssh. This means if you need to give another user permission to use the control node, you need to give that person an ssh (shell) access. This is not preferred since it's less secure, tedious to manage, and not scalable.
 
@@ -10,11 +10,11 @@ Ansible Tower has a built-in Role Based Access Control (RBAC). For the purpose o
 
 There are three types of Tower Users:
 
-Normal User: Have read and write access limited to the inventory and projects for which that user has been granted the appropriate roles and privileges.
+**Normal User:** Have read and write access limited to the inventory and projects for which that user has been granted the appropriate roles and privileges.
 
-System Auditor: Auditors implicitly inherit the read-only capability for all objects within the Tower environment.
+**System Auditor:** Auditors implicitly inherit the read-only capability for all objects within the Tower environment.
 
-System Administrator: Has admin, read, and write privileges over the entire Tower installation.
+**System Administrator:** Has admin, read, and write privileges over the entire Tower installation.
 
 Let's create a user:
 
@@ -24,7 +24,7 @@ Click the green plus button
 
 Fill in the values for the new user:
 
-Parameter  Value
+**Parameter**  **Value**
 
 FIRST NAME  Peter
 
@@ -46,7 +46,7 @@ Click SAVE
 
 ![](https://lh4.googleusercontent.com/Wy2t7vQf8sUquxu4omf9z8Df7TsXfVKyrALPzYf2eTNqgnQyQq79CON4I96GrZoB4OIb3OtZOh96OYg6LjeQ5xRt-p48aakh5ANllSmWKU57Y7wEKkr_VreMA9gyzb92TZZ4A3-f)
 
-Inventories
+**Inventories**
 
 This is the equivalent of an inventory file in Ansible Engine. There is a lot more to it (like dynamic inventories) but let's start with the basics. There will be one inventory, the Workshop Inventory. Click the Workshop Inventory then click the Hosts button.
 
@@ -56,7 +56,7 @@ Example:
 
 ![](https://lh3.googleusercontent.com/YdT0ONWJ56KfW9BvOVOcJGIHf_DzqIN0DJFvdFImKUuzB7qkh8boRySGBRnVZtr5qklbhsOeC_Q_PcLkf6P0hXkKEgNA4RuIWFaCXMQN9QZoWiPjBUE9y5jokCApRRWf2x0VMMhA)
 
-Credentials
+**Credentials**
 
 Now we will examine the credentials to access our managed hosts from Tower. As part of the provisioning process for this Ansible Workshop the Workshop Credential has already been setup.
 
@@ -101,7 +101,7 @@ ENCRYPTED - take note that you can't actually examine the SSH private key once s
 
  |
 
-Projects
+**Projects**
 
 An Ansible Tower Project is a logical collection of Ansible Playbooks. You can manage your playbooks by placing them into a source code management (SCM) system supported by Tower, including Git, Subversion, and Mercurial.
 
