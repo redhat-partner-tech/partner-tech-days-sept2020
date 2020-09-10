@@ -238,7 +238,7 @@ Let's create one more Job Template that let users add a new web server into the 
 | Inventory 	| Workshop Inventory 	|
 | Project 	| Tech Day Project	|
 | Playbook 	| automate-everything/lab-examples/bigip-add-node.yml 	|
-| Credentials 	| Workshop Credentials 	|
+| Credentials 	| Workshop Credential 	|
 | Options 	|  	|
 
 
