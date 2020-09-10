@@ -16,7 +16,7 @@ A job template is a definition and set of parameters for running an Ansible job.
 * **Inventory:** On what hosts should the job run?
 * **Credentials:** What credentials are needed to log into the hosts?
 * **Project:** Where is the Playbook?
-* What Playbook to use
+* **Playbook:** What Playbook to use
 
 #### Step 1 - Creating Job Templates
 
