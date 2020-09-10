@@ -38,7 +38,7 @@ Tip: Remember that you can often click on the magnfying glass icon to get an ove
 
 Click SAVE
 
-Launch the job and observe the output. This is just an example of a simple job to ping (Ansible ping, not network ping) node1.
+Launch the job and observe the output. Do this by clicking the rocket icon next to the 'Ping a node' Job Template. This is just an example of a simple job to ping (Ansible ping, not network ping) node1.
 
 Now let's create another Job Template.
 
