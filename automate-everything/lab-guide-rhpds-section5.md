@@ -216,7 +216,7 @@ Then SAVE
 
 Then SAVE again
 
-After you save the workflow, open a different web browser if you have one on your computer, or simply open a new browser window in incognito mode, and login to Ansible Tower as user webdev1. And launch the workflow, again use node1 as an input to the survey. The workflow would ask the admin user for an approval.
+After you save the workflow, open a different web browser if you have one on your computer, or simply open a new browser window in incognito mode, and login to Ansible Tower as user webdev1 (remember, from Section 4 : Ansible Tower Basics). And, launch the workflow, again use node1 as an input to the survey. The workflow would ask the admin user for an approval.
 
 Switch back to the browser where admin is logged in, notice the BELL notification at the top of the screen, open it:
 
