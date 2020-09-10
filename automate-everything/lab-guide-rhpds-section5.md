@@ -226,7 +226,7 @@ Go ahead and approve it.
 
 **FINAL STEPS**
 
-#### Step 5 - Tying it all together
+#### Step 6 - Tying it all together
 
 Let's create one more Job Template that let users add a new web server into the load balancer pool.
 
