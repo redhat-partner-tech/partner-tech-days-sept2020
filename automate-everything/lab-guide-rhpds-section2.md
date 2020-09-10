@@ -88,7 +88,7 @@ Note that the IP addresses will be different in your environment.
 
 #### Step 5
 
-In the above output every [ ] defines a group. For example [web] is a group that contains the hosts host1 and host2.
+In the above output, every [ ] defines a group. For example [web] is a group that contains the hosts host1 and host2.
 
 Note: A group called all always exists and contains all groups and hosts defined within an inventory.
 
