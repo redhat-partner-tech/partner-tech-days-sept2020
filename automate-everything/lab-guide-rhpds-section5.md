@@ -18,13 +18,11 @@ A job template is a definition and set of parameters for running an Ansible job.
 * Project: Where is the Playbook?
 * What Playbook to use?
 
-#### Step 1 - Creating a Job Template
+#### Step 1 - Creating Job Templates
 
 Go to the Templates view, click the ![plus](https://lh5.googleusercontent.com/gTJqFBwbrTEitHRQe8XJqFyb9CVMGPYJ_9m9B9DPCflU9xaT-6tY6WwdT0cjI-SYvI6fTF7cO80eVs5kNYwHiWVn0wNcEPmcSIL_p_eWIvHiTunfGUhhQlM99l4mubgVVlMcZbkg) button and choose Job Template.
 
-Tip
-
-Remember that you can often click on magnfying glasses to get an overview of options to pick to fill in fields.
+Tip: Remember that you can often click on magnfying glasses to get an overview of options to pick to fill in fields.
 
 
 | Parameter 	| Value 	|
@@ -43,80 +41,18 @@ Launch the job and observe the output. This is just an example of a simple job t
 
 Now let's create another Job Template.
 
-|
+| Parameter 	| Value 	|
+|-	|-	|
+| Name 	| Install Web Server 	|
+| Job Type 	| Run 	|
+| Inventory 	| Workshop Inventory 	|
+| Project 	| Tech Day Project	|
+| Playbook 	| automate-everything/lab-examples/apache.yml 	|
+| Credentials 	| Workshop Credentials 	|
+| Options 	| Tick the checkbox next to 'Enable Privilege Escalation' 	|
 
-Parameter
 
- |
-
-Value
-
- |
-|
-
-NAME
-
- |
-
-Install Web Server
-
- |
-|
-
-JOB TYPE
-
- |
-
-Run
-
- |
-|
-
-INVENTORY
-
- |
-
-Workshop Inventory
-
- |
-|
-
-PROJECT
-
- |
-
-Tech Day Project
-
- |
-|
-
-PLAYBOOK
-
- |
-
-automate-everything/lab-examples/apache.yml
-
- |
-|
-
-CREDENTIAL
-
- |
-
-Workshop Credentials
-
- |
-|
-
-OPTIONS
-
- |
-
-Tick the checkbox next to "Enable Privilege Escalation"
-
- |
-
--   Click SAVE
+Click SAVE
 
 You will not be able to launch this Job Template successfully until we create a survey that asks users to supply the value of the variable "my_hostname" defined in the playbook.
 
@@ -124,55 +60,36 @@ You will not be able to launch this Job Template successfully until we create a 
 
 We will configure the survey in a bit, but for now let's look at workflow.
 
-WORKFLOW
+**WORKFLOW**
 
-The basic idea of a workflow is to link multiple Job Templates together. They may or may not share inventory, Playbooks or even permissions. The links can be conditional:
+The basic idea of a workflow is to link multiple Job Templates together. They may or may not share inventory, playbooks or even permissions. The links can be conditional:
 
--   if job template A succeeds, job template B is automatically executed afterwards
+* If job template A succeeds, job template B is automatically executed afterwards
+* But in case of failure, job template C will be run
 
--   but in case of failure, job template C will be run.
+And, workflows are not even limited to Job Templates, but can also include project or inventory updates. This enables new applications for Ansible Tower: different Job Templates can build upon each other. 
 
-And the workflows are not even limited to Job Templates, but can also include project or inventory updates.
+For example: the networking team creates playbooks with their own content, in their own Git repository and even targeting their own inventory, while the operations team also has their own repos, playbooks and inventory.
 
-This enables new applications for Ansible Tower: different Job Templates can build upon each other. E.g. the networking team creates playbooks with their own content, in their own Git repository and even targeting their own inventory, while the operations team also has their own repos, playbooks and inventory.
+#### Step 2 - Creating Workflows
 
 Let's try creating a workflow which combines the 2 job templates we have created.
 
-Set up the workflow. Workflows are configured in the Templates view, you might have noticed you can choose between Job Template and Workflow Template when adding a template.
+First, let's set up the workflow. Workflows are configured in the Templates view, you might have noticed you can choose between Job Template and Workflow Template when adding a template.
 
 ![workflow add](https://lh3.googleusercontent.com/F2ppdy4CtaLLelF1izrUW3fh7JWH6k6BhsE1x7IySwyhLsVQhn9DVig3Xgsdsfks6S8Zgj-DHqagVURjCok1MnpOXEEXCHEmyIgRnUGofAx0Q8cUkX7366rMrZWC0ohMvdSETeQo)
 
+
+
 -   Go to the Templates view and click the the green plus button. This time choose Workflow Template
 
-|
 
-NAME
+| Name 	| Default Web Server to Prod 	|
+| Organization 	| Default 	|
+| Inventory 	| Workshop Inventory 	|
 
- |
 
-Deploy Web Server to Prod
-
- |
-|
-
-ORGANIZATION
-
- |
-
-Default
-
- |
-|
-
-INVENTORY
-
- |
-
-Workshop Inventory
-
- |
-
--   Click SAVE
+Click SAVE
 
 After saving the template the Workflow Visualizer opens to allow you to build a workflow. You can later open the Workflow Visualizer again by using the button on the template details page.
 
