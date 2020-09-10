@@ -19,7 +19,7 @@ Announced at [Red Hat Summit 2020](https://www.redhat.com/en/summit), Ansible Au
    
 
 **Content:**
-* Presentation: Partner Tech Days - Automate Everything Q3-2020.pdf
+* Presentation: [Partner Tech Days - Automate Everything Q3-2020 - Final.pdf](https://github.com/redhat-partner-tech/partner-tech-days-sept2020/blob/master/automate-everything/Partner%20Tech%20Days%20-%20Automate%20Everything%20Q3-2020%20-%20Final.pdf)
 * Demo: Ansible Tower & Ansible Cloud Services Walkthrough
 * Lab: 
   * Section 1 : Standing up the lab environment in RHPDS
