@@ -13,10 +13,10 @@ Objective: In this section we will create a small scale orchestration where:
 
 A job template is a definition and set of parameters for running an Ansible job. Job templates are useful to execute the same job many times. So before running an Ansible Job from Tower you must create a Job Template that pulls together:
 
-* Inventory: On what hosts should the job run?
-* Credentials What credentials are needed to log into the hosts?
-* Project: Where is the Playbook?
-* What Playbook to use?
+* **Inventory:** On what hosts should the job run?
+* **Credentials:** What credentials are needed to log into the hosts?
+* **Project:** Where is the Playbook?
+* What Playbook to use
 
 #### Step 1 - Creating Job Templates
 
