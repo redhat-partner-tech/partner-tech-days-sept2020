@@ -111,128 +111,50 @@ After saving the template the Workflow Visualizer opens to allow you to build a 
 
 -   Click SAVE in the Workflow Template view
 
-SURVEYS
+
+
+**SURVEYS**
 
 The survey feature only provides a simple query for data - it does not support four-eye principles, queries based on dynamic data or nested menus.
 
+
+#### Step 3 - Creating a Survey
+
 On the "Deploy Web Server to Prod" workflow template, click the "Add Survey" button.
 
-|
+| Prompt 	| Please specify a hostname 	|
+| Description 	| Make sure the hostname is correct! 	|
+| Answer VAR Name 	| my_hostname 	|
+| Answer Type 	| Text 	|
+| Min Length 	| 1 	|
+| Max Length 	| 100 	|
 
-PROMPT
 
- |
-
-Please specify a hostname
-
- |
-|
-
-DESCRIPTION
-
- |
-
-Make sure the hostname is correct!
-
- |
-|
-
-ANSWER VAR NAME
-
- |
-
-my_hostname
-
- |
-|
-
-ANSWER TYPE
-
- |
-
-Text
-
- |
-|
-
-MIN LENGTH
-
- |
-
-1
-
- |
-|
-
-MAX LENGTH
-
- |
-
-100
-
- |
-
--   Click +ADD, then click SAVE
+Click +ADD, then click SAVE
 
 Then SAVE the workflow.
 
 Launch the workflow and when the survey prompts you for a hostname, use node1 as the answer. Observe the workflow, click on DETAILS to see outputs.
 
-NOTIFICATIONS
+**NOTIFICATIONS**
 
-Now let's look at notifications. Ansible Tower supports quite a few ways of notifying users, e.g. email, Slack, etc. For the purpose of this exercise, let's use Slac (note: if you don't have a Slack account, don't worry about it, set this up anyway and save it. We need this for our exercise on Approval later.)
+Now let's look at notifications. Ansible Tower supports quite a few ways of notifying users, e.g. email, Slack, etc. For the purpose of this exercise, let's use Slack (note: if you don't have a Slack account, don't worry about it, set this up anyway and save it. We need this for our exercise on Approval later.)
+
+
+#### Step 4 - Creating a Notification
 
 On the Ansible Tower screen, go to ADMINISTRATION -> Notifications.
 
 Click the green plus sign to create a new notification template:
 
-|
+| Name 	| My Slack Notification 	|
+| Organization 	| Default 	|
+| Type 	| Slack 	|
+| Dest Channel 	| #general 	|
+| Token 	| <insert your Slack token here if you have one, else insert "12345" 	|
 
-NAME
 
- |
-
-My Slack Notification
-
- |
-|
-
-ORGANIZATION
-
- |
-
-Default
-
- |
-|
-
-TYPE
-
- |
-
-Slack
-
- |
-|
-
-DEST CHANNEL
-
- |
-
-#general
-
- |
-|
-
-TOKEN
-
- |
-
-<insert your Slack token here if you have one, else insert "12345"
-
- |
-
--   SAVE
+Click SAVE
 
 Now let's go back to our workflow from the previous exercise (Deploy Web Server to Prod).
 
@@ -246,50 +168,23 @@ Then click on PERMISSIONS button, click on the green plus sign button to add a p
 
 Don't forget to click on SAVE.
 
-APPROVAL
+**APPROVAL**
+
+<blurb>
+
+#### Step 4 - Creating an Approval
 
 Now click on the DETAILS button to go back to your workflow main screen, then click on WORKFLOW VISUALIZER button.
 
 Click on the START button to create a new "node". At the top pull down menu, choose "Approval".
 
-|
+| Name 	| Approval 	|
+| Desc 	| My approval step 	|
+| Run 	| Always 	|
+| Convergence 	| ANY 	|
 
-NAME
 
- |
-
-Approval
-
- |
-|
-
-DESC
-
- |
-
-My approval step
-
- |
-|
-
-RUN
-
- |
-
-Always
-
- |
-|
-
-CONVERGENCE
-
- |
-
-ANY
-
- |
-
--   SAVE
+Click SAVE
 
 You will have this as the result:
 
@@ -301,11 +196,11 @@ Then click on "Ping a node":
 
 ![](https://lh3.googleusercontent.com/IjwLMWlO9tbF0rczBW1p7yWC9Xi1zWEY-PpZPagC0n6gLtOJDgCgIRk87AE9A__3Bn6EzYiKYHBPD70lG539De4YwnOrATeVIVMxxVhBuhAtf4tHdmQVKlyVS68wGIjvY91JvTfI)
 
-Then SAVE.
+Then SAVE
 
 ![](https://lh4.googleusercontent.com/5SRbyDKVC1aA1G6UJ0cGpDOXnhRAqYJELAkbPLcUQGqZnYDw_qyXtNLDAc-VUYasZxZdjluLZpDeEbkiVkSvxBwwO8Hak3XUdyLunjGRvBmUsDbf_uE-xjArAuAf_rTFcpjLcQvK)
 
-Then SAVE again.
+Then SAVE again
 
 After you save the workflow, open a different web browser if you have one on your computer, or simply open a new browser window in incognito mode, and login to Ansible Tower as user webdev1. And launch the workflow, again use node1 as an input to the survey. The workflow would ask the admin user for an approval.
 
@@ -315,7 +210,9 @@ Switch back to the browser where admin is logged in, notice the BELL notificatio
 
 Go ahead and approve it.
 
-FINAL STEPS
+**FINAL STEPS**
+
+#### Step 5 - Tying it all together
 
 Let's create one more Job Template that let users add a new web server into the load balancer pool.
 
