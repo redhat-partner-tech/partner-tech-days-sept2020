@@ -188,45 +188,34 @@ f5 ansible_host=34.199.128.69 ansible_user=admin private_ip=172.16.26.136 ansibl
 
 Using your text editor of choice create a new file called bigip-node.yml.
 
+```
 [student1@ansible ~]$ nano bigip-node.yml
+```
 
 vim and nano are available on the control node, as well as Visual Studio and Atom via RDP
 
 Enter the following play definition into bigip-node.yml:
 
+```
 ---
-
 - name: BIG-IP SETUP
-
   hosts: lb
-
   connection: local
-
   gather_facts: false
-
   tasks:
 
 - name: CREATE NODES
-
     bigip_node:
-
       provider:
-
         server: "{{private_ip}}"
-
         user: "{{ansible_user}}"
-
         password: "{{ansible_ssh_pass}}"
-
         server_port: 8443
-
         validate_certs: no
-
       host: "{{hostvars[item].ansible_host}}"
-
       name: "{{hostvars[item].inventory_hostname}}"
-
     loop: "{{ groups['web'] }}"
+```
 
 -   The --- at the top of the file indicates that this is a YAML file.
 
@@ -260,23 +249,22 @@ Enter the following play definition into bigip-node.yml:
 
 Run the playbook - exit back into the command line of the control host and execute the following:
 
+```
 [student1@ansible ~]$ ansible-playbook bigip-node.yml
+```
 
 The output will look as follows.
 
+```
 [student1@ansible]$ ansible-playbook bigip-node.yml
 
 PLAY [BIG-IP SETUP] ************************************************************
-
 TASK [CREATE NODES] ************************************************************
-
 changed: [f5] => (item=node1)
-
 changed: [f5] => (item=node2)
-
 PLAY RECAP *********************************************************************
-
 f5 : ok=1    changed=1    unreachable=0    failed=0
+```
 
 Confirm that you can see the nodes added in F5 by logging in to F5 via the web interface, and going to Local Traffic → Nodes
 
@@ -286,41 +274,27 @@ Confirm that you can see the nodes added in F5 by logging in to F5 via the web i
 
 Enter the following play definition into bigip-pool.yml:
 
+```
 ---
-
 - name: BIG-IP SETUP
-
   hosts: lb
-
   connection: local
-
   gather_facts: false
-
-  tasks:
+  tasks:
 
 - name: CREATE POOL
-
     bigip_pool:
-
       provider:
-
         server: "{{private_ip}}"
-
         user: "{{ansible_user}}"
-
         password: "{{ansible_ssh_pass}}"
-
         server_port: 8443
-
         validate_certs: no
-
       name: "http_pool"
-
       lb_method: "round-robin"
-
       monitors: "/Common/http"
-
       monitor_type: "and_list"
+```
 
 -   The --- at the top of the file indicates that this is a YAML file.
 
@@ -355,67 +329,46 @@ Enter the following play definition into bigip-pool.yml:
 -   The validate_certs: "no" parameter tells the module to not validate SSL certificates. This is just used for demonstration purposes since this is a lab.
 
 Run the playbook - exit back into the command line of the control host and execute the following:
-
+```
 [student1@ansible ~]$ ansible-playbook bigip-pool.yml
-
+```
 The output will look as follows.
-
+```
 [student1@ansible ~]$ ansible-playbook bigip-pool.yml
 
 PLAY [BIG-IP SETUP] ************************************************************
-
 TASK [CREATE POOL] *************************************************************
-
 changed: [f5]
-
 PLAY RECAP *********************************************************************
-
 f5 : ok=1    changed=1    unreachable=0    failed=0
+```
 
 Now that the pool has been created, let's add node1 and node2 into the pool.
 
 Enter the following play definition into bigip-pool-members.yml:
-
+```
 ---
-
 - name: BIG-IP SETUP
-
   hosts: lb
-
   connection: local
-
   gather_facts: false
-
   tasks:
 
 - name: ADD POOL MEMBERS
-
     bigip_pool_member:
-
       provider:
-
         server: "{{private_ip}}"
-
         user: "{{ansible_user}}"
-
         password: "{{ansible_ssh_pass}}"
-
         server_port: 8443
-
         validate_certs: no
-
       state: "present"
-
       name: "{{hostvars[item].inventory_hostname}}"
-
       host: "{{hostvars[item].ansible_host}}"
-
       port: "80"
-
       pool: "http_pool"
-
     loop: "{{ groups['web'] }}"
-
+```
 -   The --- at the top of the file indicates that this is a YAML file.
 
 -   The hosts: lb, indicates the play is run only on the lb group. Technically there only one F5 device but if there were multiple they would be configured simultaneously.
@@ -453,25 +406,20 @@ Enter the following play definition into bigip-pool-members.yml:
 -   loop: tells the task to loop over the provided list. The list in this case is the group web which includes two RHEL hosts.
 
 Run the playbook - exit back into the command line of the control host and execute the following:
-
+```
 [student1@ansible ~]$ ansible-playbook bigip-pool-members.yml
-
+```
 The output will look as follows.
-
+```
 [student1@ansible ~]$ ansible-playbook bigip-pool-members.yml
 
 PLAY [BIG-IP SETUP] ************************************************************
-
 TASK [ADD POOL MEMBERS] ********************************************************
-
 changed: [f5] => (item=host1)
-
 changed: [f5] => (item=host2)
-
 PLAY RECAP *********************************************************************
-
 f5 : ok=1    changed=1    unreachable=0    failed=0
-
+```
 Confirm that you see the new pool created and its members by logging in to your F5 load balancer web interface.
 
 ![](https://lh6.googleusercontent.com/CUS6O9IILzxLVVp8NCT6m2i8gzfH3neZoFjdDAnNisdRnT0psqCuK8KDiY1xPeZF-OY_gpPrE1d0BLKTt2O5hEMmb9fvN_ek6nT5lU7PXU6TVfvLqw7KNCOSA3R2uQ-XetCWw3fa)
@@ -485,49 +433,30 @@ A virtual server in F5 load balancer is a combination of IP and port number. Whe
 Now let's create a virtual server.
 
 Enter the following play definition into bigip-virtual-server.yml:
-
+```
 ---
-
 - name: BIG-IP SETUP
-
   hosts: lb
-
   connection: local
-
   gather_facts: false
-
   tasks:
 
 - name: ADD VIRTUAL SERVER
-
     bigip_virtual_server:
-
       provider:
-
         server: "{{private_ip}}"
-
         user: "{{ansible_user}}"
-
         password: "{{ansible_ssh_pass}}"
-
         server_port: 8443
-
         validate_certs: no
-
       name: "vip"
-
       destination: "{{private_ip}}"
-
       port: "443"
-
       enabled_vlans: "all"
-
       all_profiles: ['http','clientssl','oneconnect']
-
       pool: "http_pool"
-
       snat: "Automap"
-
+```
 -   The --- at the top of the file indicates that this is a YAML file.
 
 -   The hosts: f5, indicates the play is run only on the F5 BIG-IP device
@@ -567,21 +496,15 @@ Enter the following play definition into bigip-virtual-server.yml:
 -   The validate_certs: "no" parameter tells the module to not validate SSL certificates. This is just used for demonstration purposes since this is a lab.
 
 Run the playbook - exit back into the command line of the control host and execute the following:
-
+```
 [student1@ansible ~]$ ansible-playbook bigip-virtual-server.yml
 
-[student1@ansible]$ ansible-playbook bigip-virtual-server.yml
-
 PLAY [BIG-IP SETUP]*************************************************************
-
 TASK [ADD VIRTUAL SERVER] ******************************************************
-
 changed: [f5]
-
 PLAY RECAP *********************************************************************
-
 f5 : ok=1    changed=1    unreachable=0    failed=0
-
+```
 Confirm that you see the new virtual server in F5:
 
 ![](https://lh3.googleusercontent.com/4wVTJOohN3TxDqBGBYkknVqial1Tb06AGt9pGIBrFJuKXa6TZ1BYfdsFXtSn-ntlTyTZyM7XRkdtxdQ-NQ95mDy8z6JrFl7KKrojJwLL_ScE_0HtphwPECYS7G8A2qlRwZWoVnb6)
@@ -595,7 +518,7 @@ This time use port 443 instead of 8443, e.g. [https://X.X.X.X:443/](https://x.x.
 Each time you refresh the host will change between node1 and node2. Here is animation of the host field changing: ![animation](https://lh5.googleusercontent.com/JGdU0EnwzgPCWiBo4KMnDuRTxJBvRrkWnqErzeScPGvf3BX4T6Kzx_w3IRiKR088jSUnMP_TqWp3B8H78hR2fPmFdQ5LdyRhqEC1kig-NwMg9nnXnjg7SZNLWNVXvVWloBD0wjum)
 
 Instead of using a browser window it is also possible to use the command line on the Ansible control node. Use the curl command on the ansible_host to access public IP or private IP address of F5 load balancer in combination with the --insecure and --silent command line arguments. Since the entire website is loaded on the command line it is recommended to | grep for the student number assigned to the respective workbench. (e.g. student5 would | grep student5)
-
+```
 [studentX@ansible ~]$ curl https://172.16.26.136:443 --insecure --silent | grep studentX
 
     <p>F5TEST-studentX-node1</p>
@@ -607,7 +530,7 @@ Instead of using a browser window it is also possible to use the command line on
 [studentX@ansible ~]$ curl https://172.16.26.136:443 --insecure --silent | grep studentX
 
     <p>F5TEST-studentX-node1</p>
-
+```
 
 As the final step in this section, let’s remove node2 from F5 so that we can use it for the exercises in Section 5. To do this, please use the F5 web interface:
 1. Go to Local Traffic → Pools → Members
