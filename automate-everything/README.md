@@ -35,5 +35,5 @@ Announced at [Red Hat Summit 2020](https://www.redhat.com/en/summit), Ansible Au
     * Note: RHPDS is for Advanced & Premier Business Partners or via approval
    
 
-*Kudos to Arief Winata, Bart Zhang, Mike Watkins for creating this content with some excellent content borrowed from https://github.com/ansible/workshops  
+*Kudos to Arief Winata, Bart Zhang, Mike Watkins for creating this content with some excellent content borrowed from https://github.com/ansible/workshops* 
 
