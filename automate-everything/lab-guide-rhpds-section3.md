@@ -91,165 +91,96 @@ Because the bigip_device_info module returns useful information in structured da
 
 Run the playbook - exit back into the command line of the control host and execute the following:
 
+```
 [student1@ansible ~]$ ansible-playbook bigip-facts.yml
+```
 
 The output will look as follows.
 
+```
 [student1@ansible ~]$ ansible-playbook bigip-facts.yml
-
 PLAY [GRAB F5 FACTS] ****************************************************************************************************************************************
-
 TASK [COLLECT BIG-IP FACTS] *********************************************************************************************************************************
-
 changed: [f5]
-
 TASK [DISPLAY COMPLETE BIG-IP SYSTEM INFORMATION] ***********************************************************************************************************
-
 ok: [f5] => {
-
     "device_facts": {
-
         "changed": true,
-
         "failed": false,
-
         "system_info": {
-
             "base_mac_address": "0a:54:53:51:86:fc",
-
             "chassis_serial": "685023ec-071e-3fa0-3849dcf70dff",
-
             "hardware_information": [
-
                 {
-
                     "model": "Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz",
-
                     "name": "cpus",
-
                     "type": "base-board",
-
                     "versions": [
-
                         {
-
                             "name": "cpu stepping",
-
                             "version": "2"
-
                         },
-
                         {
-
                             "name": "cpu sockets",
-
                             "version": "1"
-
                         },
-
                         {
-
                             "name": "cpu MHz",
-
                             "version": "2399.981"
-
                         },
-
                         {
-
                             "name": "cores",
-
                             "version": "2  (physical:2)"
-
                         },
-
                         {
-
                             "name": "cache size",
-
                             "version": "30720 KB"
-
                         }
-
                     ]
-
                 }
-
             ],
-
             "marketing_name": "BIG-IP Virtual Edition",
-
             "package_edition": "Point Release 7",
-
             "package_version": "Build 0.0.1 - Tue May 15 15:26:30 PDT 2018",
-
             "platform": "Z100",
-
             "product_build": "0.0.1",
-
             "product_build_date": "Tue May 15 15:26:30 PDT 2018",
-
             "product_built": 180515152630,
-
             "product_changelist": 2557198,
-
             "product_code": "BIG-IP",
-
             "product_jobid": 1012030,
-
             "product_version": "13.1.0.7",
-
             "time": {
-
                 "day": 15,
-
                 "hour": 23,
-
                 "minute": 46,
-
-                "month": 4,
-
+                "month": 4,
                 "second": 25,
-
                 "year": 2019
-
             },
-
             "uptime": 1738.0
-
         }
-
     }
-
 }
-
 TASK [DISPLAY ONLY THE MAC ADDRESS] *************************************************************************************************************************
-
 ok: [f5] => {
-
     "device_facts['system_info']['base_mac_address']": "0a:54:53:51:86:fc"
-
 }
-
 TASK [DISPLAY ONLY THE VERSION] *****************************************************************************************************************************
-
 ok: [f5] => {
-
     "device_facts['system_info']['product_version']": "13.1.0.7"
-
 }
-
 PLAY RECAP **************************************************************************************************************************************************
-
 f5 : ok=4    changed=1    unreachable=0    failed=0
+```
 
 And finally, please confirm that you have web access to your F5 load balancer. You can find its details in your Ansible inventory file.
-
 For example, for the entry below, you would go to [https://34.199.128.69:8443](http://34.199.128.69:8443) (the web interface listens to port 8443), username is admin, password is skfE9PXk41hgMs
 
+```
 [lb]
-
 f5 ansible_host=34.199.128.69 ansible_user=admin private_ip=172.16.26.136 ansible_ssh_pass=skfE9PXk41hgMs
+```
 
 #### Step 2 - Add nodes
 
