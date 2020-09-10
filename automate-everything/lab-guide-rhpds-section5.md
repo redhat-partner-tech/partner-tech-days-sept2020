@@ -22,7 +22,7 @@ A job template is a definition and set of parameters for running an Ansible job.
 
 In the Tower menu under RESOURCES click Templates. Then click the ![plus](https://lh5.googleusercontent.com/gTJqFBwbrTEitHRQe8XJqFyb9CVMGPYJ_9m9B9DPCflU9xaT-6tY6WwdT0cjI-SYvI6fTF7cO80eVs5kNYwHiWVn0wNcEPmcSIL_p_eWIvHiTunfGUhhQlM99l4mubgVVlMcZbkg) button and choose Job Template.
 
-On the NEW JOB TEMPLATE page, enter the value below.
+On the NEW JOB TEMPLATE page, enter the values below.
 Tip: Remember that you can often click on the magnfying glass icon to get an overview of options to pick to fill in fields.
 
 
