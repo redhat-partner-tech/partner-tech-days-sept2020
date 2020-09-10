@@ -250,7 +250,8 @@ Then go back to our workflow and add the above new job template as followed:
 
 Next, edit the survey we created earlier for our workflow and add one more survey question:
 
-
+| Parameter 	| Value 	|
+|-	|-	|
 | Prompt 	| Please specify a hostname 	|
 | Description 	| Make sure the IP is correct! 	|
 | Answer VAR Name 	| my_ipaddy	|
