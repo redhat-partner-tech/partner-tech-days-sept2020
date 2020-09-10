@@ -198,7 +198,7 @@ Click on the START button to create a new "node". At the top pull down menu, cho
 | Convergence 	| Any	|
 
 
-Click SELECT, then SAVE
+Click SELECT
 
 You will have this as the result:
 
