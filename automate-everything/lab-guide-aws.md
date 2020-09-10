@@ -32,140 +32,107 @@ ONE TIME SETUP (On the provisioner host above)
 
 2.  Set your Access Key ID and Secret Access Key from Step 2 under ~/.aws/credentials
 
+```
 [root@centos ~]# cat ~/.aws/credentials
-
 [default]
-
 aws_access_key_id = ABCDEFGHIJKLMNOP
-
 aws_secret_access_key = ABCDEFGHIJKLMNOP/ABCDEFGHIJKLMNOP
+```
 
 1.  Clone the workshops repo:
 
 If you haven't done so already make sure you have the repo cloned to the machine executing the playbook
 
-git clone https://github.com/redhat-partner-tech/partner-tech-days-sept2020
-
-cd workshops/provisioner
+```
+[root@centos ~]# git clone https://github.com/redhat-partner-tech/partner-tech-days-sept2020
+[root@centos ~]# cd partner-tech-days-sept2020/workshops/provisioner
+```
 
 Input the Ansible Tower license file as follows:
 
-workshop/provisioner/tower_license.json
-
 Example:
-
-[root@rhel1 provisioner]# cat tower_license.json
-
+```
+[root@centos ~]# cat tower_license.json
 {
-
     "company_name": "Red Hat",
-
     "contact_email": "arwinata@redhat.com",
-
     "contact_name": "Arief Winata",
-
     "hostname": "2e601468062832eca4c2da875babbfe9",
-
     "instance_count": 5
-
     "license_date": 1594721517,
-
     "license_key": "1ab0a2dfcdd83b1162601234fa06566e258e0c1d99999c47578c5d9e892d1f8e",
-
     "license_type": "enterprise",
-
     "subscription_name": "Red Hat Ansible Tower, Standard (10 Managed Nodes) Trial",
-
     "trial": true
-
 }
-
+```
 STANDING UP THE LAB (On the provisioner host)
 
 Make sure you're inside the provisioner directory.
 
 Example:
-
+```
 [root@rhel1 provisioner]# pwd
-
 /root/partner-tech-days-sept2020/automate-everything/lab-setup-v3/workshops/provisioner
-
-[root@rhel1 provisioner]#
+```
 
 Examine the file called extra_vars.yml and change as necessary. The only line that needs to be changed is:
-
+```
 # Sets the Route53 DNS zone to use for the S3 website
-
 workshop_dns_zone: your.domain.com
+```
+You need to enter a domain name here. Use a domain name, or a sub-domain name, which you have control over it.
 
 The rest of the lines can be left as they are, e.g. password, prefix.
 
 Once you're done with the extra_vars.yml file, you can go ahead to launch the provisioner:
-
+```
 [root@rhel1 provisioner]# ansible-playbook provision_lab.yml -e @extra_vars.yml
-
+```
 It takes about 30 mins to complete the provisioning process.
 
 Note: if you don't currently have a "subscription" to F5 BigIP on AWS, you might get an error. However, the error message will include a link to the right product page in AWS for you to subscribe. While the subscription itself is free, there will be a cost incurred to run F5 BigIP.
 
 If everything goes well, you would see output similar to the following:
-
+```
 TASK [Print Summary Information] *************************************************************************************
-
 ok: [localhost] =>
-
   msg: |-
-
     PROVISIONER SUMMARY
-
     *******************
-
     - Workshop name is rh25
-
     - Instructor inventory is located at  /root/workshops/provisioner/rh25/instructor_inventory.txt
-
     - Private key is located at /root/workshops/provisioner/rh25/rh25-private.pem
-
     - Website created at http://rh25.ncc1701.stream
-
     - Auto-Assignment website located at http://login.rh25.ncc1701.stream
 
     FAILURES
-
     *******************
-
     No errors with DNS
-
     No issue with Ansible Tower callback
 
 PLAY RECAP ***********************************************************************************************************
 
 attendance-host            : ok=26   changed=22   unreachable=0    failed=0    skipped=2    rescued=0    ignored=0
-
 localhost                  : ok=94   changed=44   unreachable=0    failed=0    skipped=12   rescued=0    ignored=0
-
 rh25-student1-ansible-1    : ok=89   changed=64   unreachable=0    failed=0    skipped=7    rescued=0    ignored=0
-
 rh25-student1-f5           : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0w
-
 rh25-student1-node1        : ok=12   changed=8    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
-
 rh25-student1-node2        : ok=12   changed=8    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
-
 rh25-student1-node3        : ok=12   changed=8    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
-
 rh25-student1-node4        : ok=12   changed=8    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
 
 [root@rhel1 provisioner]#
+```
 
 Finally, use a web browser to go to the main page of the lab, for example from the above output, you would go to : http://login.rh25.ncc1701.stream
 
 ![](https://lh4.googleusercontent.com/vs75J_r9lAIRQGkFqfAZ-7ytCe4FYvqcFXOVrfYhkeGlJwqysnHUMWgUYxgvqpDIUIAqtbhq8zbMHdi-NGowMw3C5EiSqyvkzUE7iwzHc4G3TbofZizJorKUkDGsABJ-d6SGZhRW)
 
 REMOVING THE LAB
-
+```
 [root@rhel1 provisioner]# ansible-playbook teardown_lab.yml -e @extra_vars.yml -e debug_teardown=true
-
+```
 # Section 2 : Exploring the lab environment with Ansible Engine
 
 Objective: A quick introduction to Ansible command line for students with no experience with Ansible. Those with prior knowledge of Ansible might breeze through this section.
