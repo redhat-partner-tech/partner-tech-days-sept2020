@@ -1,4 +1,4 @@
-# Section 5 : Orchestration
+# Section 5 : Orchestration: Tying it all together
 
 Objective: In this section we will create a small scale orchestration where:
 
@@ -216,77 +216,19 @@ Go ahead and approve it.
 
 Let's create one more Job Template that let users add a new web server into the load balancer pool.
 
-|
 
-Parameter
+| Parameter 	| Value 	|
+|-	|-	|
+| Name 	| Add node to bigIP Pool 	|
+| Job Type 	| Run 	|
+| Inventory 	| Workshop Inventory 	|
+| Project 	| Tech Day Project	|
+| Playbook 	| automate-everything/lab-examples/bigip-add-node.yml 	|
+| Credentials 	| Workshop Credentials 	|
+| Options 	|  	|
 
- |
 
-Value
-
- |
-|
-
-NAME
-
- |
-
-Add node to bigIP Pool
-
- |
-|
-
-JOB TYPE
-
- |
-
-Run
-
- |
-|
-
-INVENTORY
-
- |
-
-Workshop Inventory
-
- |
-|
-
-PROJECT
-
- |
-
-Tech Day Project
-
- |
-|
-
-PLAYBOOK
-
- |
-
-automate-everything/lab-examples/bigip-add-node.yml
-
- |
-|
-
-CREDENTIAL
-
- |
-
-Workshop Credentials
-
- |
-|
-
-OPTIONS
-
- |\
- |
-
--   Click SAVE
+Click SAVE
 
 Then go back to our workflow and add the above new job template as followed:
 
@@ -294,62 +236,15 @@ Then go back to our workflow and add the above new job template as followed:
 
 Next, edit the survey we created earlier for our workflow and add one more survey question:
 
-|
 
-PROMPT
+| Prompt 	| Please specify a hostname 	|
+| Description 	| Make sure the IP is correct! 	|
+| Answer VAR Name 	| my_ipaddy	|
+| Answer Type 	| Text 	|
+| Min Length 	| 1 	|
+| Max Length 	| 16 	|
 
- |
-
-Please specify an IP address
-
- |
-|
-
-DESCRIPTION
-
- |
-
-Make sure the IP is correct!
-
- |
-|
-
-ANSWER VAR NAME
-
- |
-
-my_ipaddy
-
- |
-|
-
-ANSWER TYPE
-
- |
-
-Text
-
- |
-|
-
-MIN LENGTH
-
- |
-
-1
-
- |
-|
-
-MAX LENGTH
-
- |
-
-16
-
- |
-
--   Click +ADD, then click SAVE
+Click +ADD, then click SAVE
 
 Then SAVE the workflow.
 
@@ -359,5 +254,5 @@ node2 ansible_host=3.95.15.12 ansible_user=ec2-user private_ip=172.16.14.216
 
 Then verify if node2 has been added to your load balancer via the F5 web interface.
 
-End of the lab..
+*End of the lab..*
 
