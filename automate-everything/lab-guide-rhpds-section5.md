@@ -49,7 +49,7 @@ Now let's create another Job Template.
 | Inventory 	| Workshop Inventory 	|
 | Project 	| Tech Day Project	|
 | Playbook 	| automate-everything/lab-examples/apache.yml 	|
-| Credentials 	| Workshop Credentials 	|
+| Credentials 	| Workshop Credential 	|
 | Options 	| Tick the checkbox next to 'Enable Privilege Escalation' 	|
 
 
@@ -61,7 +61,10 @@ You will not be able to launch this Job Template successfully until we create a 
 
 We will configure the survey in a bit, but for now let's look at workflow.
 
-**WORKFLOW**
+
+
+
+**WORKFLOWS**
 
 The basic idea of a workflow is to link multiple Job Templates together. They may or may not share inventory, playbooks or even permissions. The links can be conditional:
 
@@ -93,7 +96,7 @@ First, let's set up the workflow. Workflows are configured in the Templates view
 
 Click SAVE
 
-After saving the template the Workflow Visualizer opens to allow you to build a workflow. You can later open the Workflow Visualizer again by using the button on the template details page.
+After saving the template, the Workflow Visualizer opens to allow you to build a workflow. You can later open the Workflow Visualizer again by using the button on the template details page.
 
 -   Click on the START button, a new node opens. To the right you can assign an action to the node, you can choose between JOBS, PROJECT SYNC, INVENTORY SYNC and APPROVAL.
 
@@ -105,7 +108,7 @@ After saving the template the Workflow Visualizer opens to allow you to build a 
 
 -   Choose "Install Web Server" as the next Job
 
--   Leave Type set to On Success
+-   Leave RUN set to On Success
 
 -   Click SELECT
 
@@ -174,13 +177,16 @@ Then click on PERMISSIONS button, click on the green plus sign button to add a p
 
 Don't forget to click on SAVE.
 
-**APPROVAL**
+
+
+
+**APPROVALS**
 
 <blurb>
 
-#### Step 4 - Creating an Approval
+#### Step 5 - Creating an Approval
 
-Now click on the DETAILS button to go back to your workflow main screen, then click on WORKFLOW VISUALIZER button.
+Now click on the DETAILS button to go back to your workflow main screen (you are still in the 'Default Web Server to Prod' Workflow Template). Then, click on WORKFLOW VISUALIZER button.
 
 Click on the START button to create a new "node". At the top pull down menu, choose "Approval".
 
@@ -189,10 +195,10 @@ Click on the START button to create a new "node". At the top pull down menu, cho
 | Name 	| Approval 	|
 | Desc 	| My approval step 	|
 | Run 	| Always 	|
-| Convergence 	| ANY 	|
+| Convergence 	| Any	|
 
 
-Click SAVE
+Click SELECT, then SAVE
 
 You will have this as the result:
 
