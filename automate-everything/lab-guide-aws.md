@@ -45,7 +45,7 @@ If you haven't done so already make sure you have the repo cloned to the machine
 
 ```
 [root@centos ~]# git clone https://github.com/redhat-partner-tech/partner-tech-days-sept2020
-[root@centos ~]# cd partner-tech-days-sept2020/workshops/provisioner
+[root@centos ~]# cd partner-tech-days-sept2020/lab-setup-v3/workshops/provisioner
 ```
 
 Input the Ansible Tower license file as follows:
