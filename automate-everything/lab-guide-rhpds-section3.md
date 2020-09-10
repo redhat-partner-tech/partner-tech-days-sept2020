@@ -4,13 +4,13 @@ Objective: To cover the basics of a load balancer, in this case an F5 BigIP is u
 
 #### Step 1 - Gather Facts
 
-Using your text editor of choice create a new file called bigip-facts.yml.
+Using your text editor of choice, create a new file called bigip-facts.yml.
 
 ```
 [student1@ansible ~]$ nano bigip-facts.yml
 ```
 
-vim and nano are available on the control node, as well as Visual Studio
+vim and nano are available on the control node, as well as Visual Studio.
 
 Ansible playbooks are YAML files. YAML is a structured encoding format that is also extremely human readable (unlike it's subset - the JSON format).
 
