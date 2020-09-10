@@ -199,7 +199,7 @@ REMOVING THE LAB
 
 [root@rhel1 provisioner]# ansible-playbook teardown_lab.yml -e @extra_vars.yml -e debug_teardown=true
 
-#### Section 2 : Exploring the lab environment
+# Section 2 : Exploring the lab environment with Ansible Engine
 
 Objective: A quick introduction to Ansible command line for students with no experience with Ansible. Those with prior knowledge of Ansible might breeze through this section.
 
@@ -207,27 +207,25 @@ Objective: A quick introduction to Ansible command line for students with no exp
 
 #### Step 1
 
-Navigate to the home directory.
+Login to your Ansible Control Node via SSH as student1 as per the instruction in Section 1. And navigate to the home directory.
 
+```
 [student1@ansible ~]$
+```
 
 #### Step 2
 
 Run the ansible command with the --version command to look at what is configured:
 
+```
 [student1@ansible ~]$ ansible --version
-
 ansible 2.6.2
-
-  config file = /home/student1/.ansible.cfg
-
-  configured module search path = [u'/home/student1/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
-
-  ansible python module location = /usr/lib/python2.7/site-packages/ansible
-
-  executable location = /usr/bin/ansible
-
-  python version = 2.7.5 (default, May  3 2017, 07:55:04) [GCC 4.8.5 20150623 (Red Hat 4.8.5-14)]
+  config file = /home/student1/.ansible.cfg
+  configured module search path = [u'/home/student1/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible
+  python version = 2.7.5 (default, May  3 2017, 07:55:04) [GCC 4.8.5 20150623 (Red Hat 4.8.5-14)]
+```
 
 Note: The Ansible version you see might differ from the above output
 
@@ -237,31 +235,21 @@ This command gives you information about the version of Ansible, location of the
 
 Use the cat command to view the contents of the ansible.cfg file.
 
+```
 [student1@ansible ~]$ cat ~/.ansible.cfg
-
 [defaults]
-
 stdout_callback = yaml
-
 connection = smart
-
 timeout = 60
-
 deprecation_warnings = False
-
 host_key_checking = False
-
 retry_files_enabled = False
-
 inventory = /home/student1/lab_inventory/hosts
-
 [persistent_connection]
-
 connect_timeout = 200
-
 command_timeout = 200
-
 [student1@ansible ~]$
+```
 
 Note the following parameters within the ansible.cfg file:
 
@@ -273,37 +261,31 @@ The scope of a play within a playbook is limited to the groups of hosts declared
 
 In this lab you will work with a file based inventory written in the ini format. Use the cat command to view the contents of your inventory:
 
+```
 [student1@ansible ~]$ cat ~/lab_inventory/hosts
+```
 
-The output will look as follows with student2 being the respective student workbench:
 
-node3 ansible_host=54.152.203.104 ansible_user=ec2-user private_ip=172.16.182.197
+The output will look as follows with student1 being the respective student workbench:
 
-node4 ansible_host=100.25.219.137 ansible_user=ec2-user private_ip=172.16.247.51
-
+```
 [all:vars]
-
-ansible_user=student2
-
-ansible_ssh_pass=ansible
-
+ansible_user=student1
+ansible_ssh_pass=skfE9PXk41hgMs
 ansible_port=22
 
 [lb]
-
-f5 ansible_host=34.199.128.69 ansible_user=admin private_ip=172.16.26.136 ansible_ssh_pass=admin
+f5 ansible_host=3.235.9.14 ansible_user=admin private_ip=172.16.135.2 ansible_ssh_pass=skfE9PXk41hgMs
 
 [control]
-
-ansible ansible_host=107.23.192.217 ansible_user=ec2-user private_ip=172.16.207.49
+ansible ansible_host=3.237.237.173 ansible_user=ec2-user private_ip=172.16.98.96
 
 [web]
+node1 ansible_host=100.24.107.157 ansible_user=ec2-user private_ip=172.16.36.182
+node2 ansible_host=3.235.57.122 ansible_user=ec2-user private_ip=172.16.150.46
+```
 
-host1 ansible_host=107.22.141.4 ansible_user=ec2-user private_ip=172.16.170.190
-
-host2 ansible_host=54.146.162.192 ansible_user=ec2-user private_ip=172.16.160.13
-
-Note that the IP addresses will be different in your environment. Notice that node3 and node4 are not in the web group. We will use node3 and node4 in later exercises.
+Note that the IP addresses will be different in your environment.
 
 #### Step 5
 
@@ -329,8 +311,9 @@ Does the password have to be in plain text? No, Red Hat Ansible Tower can take c
 
 Go back to the home directory, all the following exercises will be performed in the home directory.
 
+```
 [student1@ansible ~]$ cd ~
-
+```
 #### Section 3 : Quick intro to F5 Load Balancer
 
 Objective: To cover the basics of a load balancer, in this case an F5 BigIP is used as an example of a load balancer and a network device that Ansible can control and automate.
