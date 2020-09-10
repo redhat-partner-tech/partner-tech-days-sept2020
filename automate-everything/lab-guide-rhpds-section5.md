@@ -262,5 +262,5 @@ node2 ansible_host=3.95.15.12 ansible_user=ec2-user private_ip=172.16.14.216
 
 Then verify if node2 has been added to your load balancer via the F5 web interface.
 
-*End of the lab..*
+You have now completed all five sections of the lab. Give yourself a pat on the back!*
 
