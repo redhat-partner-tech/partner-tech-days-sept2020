@@ -57,7 +57,7 @@ Scroll down to the bottom and click on student1 under Workbench Information to s
 
 ![](https://lh5.googleusercontent.com/FNyXO1DesMn24kORQkBPHdRyDST-yhlUZNMpRlYRu5mcGg3JPRywnHLeU9EcztR5r7mZvPMi9JTfbQSV1SwCBhfxYiNNkMlh-OsmQB1f6f2m4dY_yaO0I2ruQMf5B9vL37fdv-If)
 
-1.  Follow the instructions above to access your Ansible Control Node via SSH
+Follow the instructions above to access your Ansible Control Node via SSH
 
 By now your lab is ready to use for the exercises in this lab guide. Please make sure to follow only the exercise instructions in this lab guide, and *not* the one on the web link (example above [http://f544.open.redhat.com](http://4fb0.open.redhat.com/)) you receive from RHPDS. 
 
