@@ -9,7 +9,7 @@ Objective: In this section we will create a small scale orchestration where:
 * Once approved, before adding the new web serve into the pool, the system will ensure httpd is installed and running
 * If all goes well, the new web server will then be added to the load balancer pool
 
-**JOB TEMPLATE**
+**JOB TEMPLATES**
 
 A job template is a definition and set of parameters for running an Ansible job. Job templates are useful to execute the same job many times. So before running an Ansible Job from Tower you must create a Job Template that pulls together:
 
@@ -20,9 +20,10 @@ A job template is a definition and set of parameters for running an Ansible job.
 
 #### Step 1 - Creating Job Templates
 
-Go to the Templates view, click the ![plus](https://lh5.googleusercontent.com/gTJqFBwbrTEitHRQe8XJqFyb9CVMGPYJ_9m9B9DPCflU9xaT-6tY6WwdT0cjI-SYvI6fTF7cO80eVs5kNYwHiWVn0wNcEPmcSIL_p_eWIvHiTunfGUhhQlM99l4mubgVVlMcZbkg) button and choose Job Template.
+In the Tower menu under RESOURCES click Templates. Then click the ![plus](https://lh5.googleusercontent.com/gTJqFBwbrTEitHRQe8XJqFyb9CVMGPYJ_9m9B9DPCflU9xaT-6tY6WwdT0cjI-SYvI6fTF7cO80eVs5kNYwHiWVn0wNcEPmcSIL_p_eWIvHiTunfGUhhQlM99l4mubgVVlMcZbkg) button and choose Job Template.
 
-Tip: Remember that you can often click on magnfying glasses to get an overview of options to pick to fill in fields.
+On the NEW JOB TEMPLATE page, enter the value below.
+Tip: Remember that you can often click on the magnfying glass icon to get an overview of options to pick to fill in fields.
 
 
 | Parameter 	| Value 	|
@@ -32,7 +33,7 @@ Tip: Remember that you can often click on magnfying glasses to get an overview o
 | Inventory 	| Workshop Inventory 	|
 | Project 	| Tech Day Project	|
 | Playbook 	| automate-everything/lab-examples/ping-node1.yml 	|
-| Credentials 	| Workshop Credentials 	|
+| Credentials 	| Workshop Credential 	|
 
 
 Click SAVE
