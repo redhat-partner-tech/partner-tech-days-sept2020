@@ -83,7 +83,8 @@ First, let's set up the workflow. Workflows are configured in the Templates view
 
 -   Go to the Templates view and click the the green plus button. This time choose Workflow Template
 
-
+| Parameter 	| Value 	|
+|-	|-	|
 | Name 	| Default Web Server to Prod 	|
 | Organization 	| Default 	|
 | Inventory 	| Workshop Inventory 	|
@@ -122,6 +123,8 @@ The survey feature only provides a simple query for data - it does not support f
 
 On the "Deploy Web Server to Prod" workflow template, click the "Add Survey" button.
 
+| Parameter 	| Value 	|
+|-	|-	|
 | Prompt 	| Please specify a hostname 	|
 | Description 	| Make sure the hostname is correct! 	|
 | Answer VAR Name 	| my_hostname 	|
@@ -147,6 +150,8 @@ On the Ansible Tower screen, go to ADMINISTRATION -> Notifications.
 
 Click the green plus sign to create a new notification template:
 
+| Parameter 	| Value 	|
+|-	|-	|
 | Name 	| My Slack Notification 	|
 | Organization 	| Default 	|
 | Type 	| Slack 	|
@@ -178,6 +183,8 @@ Now click on the DETAILS button to go back to your workflow main screen, then cl
 
 Click on the START button to create a new "node". At the top pull down menu, choose "Approval".
 
+| Parameter 	| Value 	|
+|-	|-	|
 | Name 	| Approval 	|
 | Desc 	| My approval step 	|
 | Run 	| Always 	|
