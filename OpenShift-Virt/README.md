@@ -10,7 +10,7 @@ A feature of OpenShift Container Platform, [OpenShift Virtualization](https://ww
 **Content:**
 * Lab: [OpenShift Virtualiation Lab on Packet](https://github.com/heatmiser/openshift-virt-labs)
     * Detailed instructions outlining how to duplicate the lab/demo environment will be posted by Monday, 9/14
-* Presentation: [deck](TBD)
+* Presentation: [deck](https://github.com/redhat-partner-tech/partner-tech-days-sept2020/blob/master/OpenShift-Virt/OpenShift-Virtualization-PartnerDays-Sept2020.pdf)
 * Demos: *Live during session and included in Lab*
     * OpenShift Virtualization Operator
     * VM Storage including add or edit persistent Storage 
