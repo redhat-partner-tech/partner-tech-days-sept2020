@@ -8,7 +8,7 @@ A feature of OpenShift Container Platform, [OpenShift Virtualization](https://ww
 
 
 **Content:**
-* Lab: **[OpenShift Virtualiation Lab on Packet](https://github.com/heatmiser/openshift-virt-labs)
+* Lab: [OpenShift Virtualiation Lab on Packet](https://github.com/heatmiser/openshift-virt-labs)
 * Presentation: [deck](TBD)
 * Demos: Live during sesssion and included in Lab
     * OpenShift Virtualization Operator
