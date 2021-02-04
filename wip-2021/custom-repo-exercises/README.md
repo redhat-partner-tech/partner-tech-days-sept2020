@@ -114,6 +114,7 @@ Leave the rest of the fields blank, and click "Save".
 
 -   And verify if you can use the figlet application (type figlet on command line)
 
+`
 $ figlet
 
 finish!
@@ -127,3 +128,4 @@ finish!
 |  _| | | | | \__ \ | | |_|
 
 |_| |_|_| |_|_|___/_| |_(_)
+`
