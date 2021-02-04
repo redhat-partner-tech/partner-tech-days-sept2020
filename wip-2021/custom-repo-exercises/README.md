@@ -13,7 +13,10 @@ In this part of the workshop, we will learn how to configure a custom repository
 - TBA
 
 **1. Logging in to Satellite**
-Use a web browser on you computer to access the Satellite GUI via the link found in the Environment above.
+- Use a web browser on you computer to access the Satellite GUI via the link found in the Environment above
+
+
+
 
 
 
