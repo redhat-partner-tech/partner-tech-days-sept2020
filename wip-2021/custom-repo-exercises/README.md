@@ -116,16 +116,10 @@ Leave the rest of the fields blank, and click "Save".
 
 ```
 $ figlet
-
 finish!
-
   __ _       _     _     _
-
  / _(_)_ __ (_)___| |__ | |
-
 | |_| | '_ \| / __| '_ \| |
-
 |  _| | | | | \__ \ | | |_|
-
 |_| |_|_| |_|_|___/_| |_(_)
 ```
