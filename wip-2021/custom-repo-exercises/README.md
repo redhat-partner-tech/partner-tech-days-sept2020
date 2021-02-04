@@ -12,11 +12,8 @@ In this part of the workshop, we will learn how to configure a custom repository
 - Laction to be used = Default Location
 - TBA
 
-**Upgrade Scenarios**
-- [Exercise 1](upgrade-exercise1.md) -- Convert CentOS 6 to RHEL 6, then upgrade RHEL 6 --> RHEL 8
-    - Covers CentOS 6 to RHEL 6 conversion
-    - RHEL 6 to RHEL 7 upgrade
-    - RHEL 7 to RHEL 8 upgrade
-    
+**1. Logging in to Satellite**
+Use a web browser on you computer to access the Satellite GUI via the link found in the Environment above.
+
 
 
