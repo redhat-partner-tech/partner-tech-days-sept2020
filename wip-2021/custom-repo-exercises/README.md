@@ -1,5 +1,5 @@
-Intergrated Management Workshop: Configuring a custom repository in Satellite
------------------------------------------------------------------------------
+Integrated Management Workshop: Configuring a custom repository in Satellite
+----------------------------------------------------------------------------
 
 In this part of the workshop, we will learn how to configure a custom repository in Satellite. When you have RHEL clients managed by Satellite in your environment, sometimes there is a requirement to manage 3rd-party software packages that don't come from any of the RHEL distributions/repositories. For example, the Creative department wanted you to manage a 3rd-party CAD/CAM software that runs on many of their RHEL workstations.
 
