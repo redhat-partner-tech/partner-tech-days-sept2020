@@ -32,13 +32,13 @@ In this part of the workshop, we will learn how to configure a custom repository
 
 ![](https://lh5.googleusercontent.com/g22VsrKilxepC3DSpw-tGWM9YOFHfrH2z8GRmwj6s_0369aX9JhXY0K2YGBI13mM7xB1CiWAOLg1CbQrNchNsWZsUgDBO3bNd9J_3bF5dQO0A1GztjMyVNx1OUrLM5STVk50Wx1a)
 
-2\. Set Organization and Location (values to be changed)
+#### 2\. Set Organization and Location (values to be changed)
 
 -   Ensure that you select "myorg" as the Organization and "Default Location" as the location, by clicking on the menu on top of the page
 
 ![](https://lh5.googleusercontent.com/eQPZFalUi2kSLW2K7ejRnPnEl0pj_3msuo4QXKv8BKvKhAz-ClEA8FQspIhH8ukhfMHXc4VYJOYSYvgPZRnaKx94ZDaBqxDPYjeZqj-yGAKnwZBivyEksD7YIaurxnIxNCmAkWss)
 
-3\. Creating a custom product (values to be changed)
+#### 3\. Creating a custom product (values to be changed)
 
 -   Now we will start preparing our Satellite server to be able to manage a custom product
 
@@ -52,7 +52,7 @@ In this part of the workshop, we will learn how to configure a custom repository
 
 Leave the rest of the fields blank, and click "Save". It should then take you to the "3rd Party" product screen.
 
-4\. Creating a custom repository (values to be changed)
+#### 4\. Creating a custom repository (values to be changed)
 
 -   Click the "New Repository" button, and fill out the details as followed (note that the Label field will be filled out automatically):
 
@@ -60,7 +60,7 @@ Leave the rest of the fields blank, and click "Save". It should then take you to
 
 Leave the rest of the fields blank, and click "Save".
 
-5\. Preparing a custom software package (values to be changed)
+#### 5\. Preparing a custom software package (values to be changed)
 
 -   Let's prepare a 3-rd party software package which doesn't come with RHEL distribution. Since we have limited time, let's stick with a small footprint software package.
 
@@ -68,7 +68,7 @@ Leave the rest of the fields blank, and click "Save".
 
 <https://www.rpmfind.net/linux/epel/7/x86_64/Packages/f/figlet-2.2.5-9.el7.x86_64.rpm>
 
-6\. Uploading custom software package to Satellite (values to be changed)
+#### 6\. Uploading custom software package to Satellite (values to be changed)
 
 -   Go back to the "3rd Party" product page, and you should see the "Extra Software" repository under the "Repositories" tab
 
@@ -82,7 +82,7 @@ Leave the rest of the fields blank, and click "Save".
 
 ![](https://lh6.googleusercontent.com/gCY1mGVpEgEPRdEQ-Et7rmKohHPA4DNkrTURbRdz_CYwJI5932Z_CP6IggEqPFYog2QhpPblm7fQ8l90e4GbRWPs0mf_mQmh3h7fv9DJj7mQ3BwvQYO5Lg-6laGN_DHNAdtG9G-u)
 
-7\. Adding custom repository to a content view (values to be changed)
+#### 7\. Adding custom repository to a content view (values to be changed)
 
 -   Now that we have a custom repository, let's add it to the content view that we created on previous exercises
 
@@ -106,7 +106,7 @@ Leave the rest of the fields blank, and click "Save".
 
 -   Finally promote the content view to the "Dev" lifecycle environment
 
-8\. Installing software from a custom repo on RHEL clients (values to be changed)
+#### 8\. Installing software from a custom repo on RHEL clients (values to be changed)
 
 -   Login to one of the RHEL clients (node1) via SSH
 
