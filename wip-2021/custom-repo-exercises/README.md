@@ -8,7 +8,7 @@ In this part of the workshop, we will learn how to configure a custom repository
 
 -   2 x Red Hat Enterprise Linux clients
 
-### Pre-requisites (completed in previous exercises in the workshop, values to be changed)
+## Pre-requisites (completed in previous exercises in the workshop, values to be changed)
 
 -   Organization to be used = arwinata-test
 
@@ -20,9 +20,9 @@ In this part of the workshop, we will learn how to configure a custom repository
 
 -   SSH access to RHEL clients (node1, node2) which has been registered to Satellite
 
-#### Exercise
+## Exercise
 
-1\. Logging in to Satellite
+#### 1\. Logging in to Satellite
 
 -   Use a web browser on your computer to access the Satellite GUI via the link found in the Environment above. And use the following username and password to login: admin / ansible123
 
