@@ -1,14 +1,14 @@
-Integrated Management Workshop: Configuring a custom repository in Satellite
+# Integrated Management Workshop: Configuring a custom repository in Satellite
 
 In this part of the workshop, we will learn how to configure a custom repository in Satellite. When you have RHEL clients managed by Satellite in your environment, sometimes there is a requirement to manage 3rd-party software packages that don't come from any of the RHEL distributions/repositories. For example, the Creative department wanted you to manage a 3rd-party CAD/CAM software that runs on many of their RHEL workstations.
 
-Environment
+# Environment
 
 -   Red Hat Satellite 6
 
 -   2 x Red Hat Enterprise Linux clients
 
-Pre-requisites (completed in previous exercises in the workshop, values to be changed)
+# Pre-requisites (completed in previous exercises in the workshop, values to be changed)
 
 -   Organization to be used = arwinata-test
 
@@ -20,7 +20,7 @@ Pre-requisites (completed in previous exercises in the workshop, values to be ch
 
 -   SSH access to RHEL clients (node1, node2) which has been registered to Satellite
 
-Exercise
+# Exercise
 
 1\. Logging in to Satellite
 
