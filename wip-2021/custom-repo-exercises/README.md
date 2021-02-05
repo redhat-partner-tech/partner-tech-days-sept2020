@@ -50,7 +50,7 @@ In this part of the workshop, we will learn how to configure a custom repository
 
 ![](https://lh5.googleusercontent.com/PsSrTQFuV_BSHr1DmMiICStmpTWQAz6INkfg_UsvmptZcAZiltBXdoxIl9ls1myn6SvoXYCAg8ZtgvYNDE1lV9wCCqzEIRDdgSBPzBAhDzUEmL6xX-JSb4hNqxtuiO8COZPQvkxY)
 
-Leave the rest of the fields blank, and click "Save". It should then take you to the "3rd Party" product screen.
+Leave the rest of the fields blank or as they are, and click "Save". It should then take you to the "3rd Party" product screen.
 
 #### 4\. Creating a custom repository (values to be changed)
 
@@ -58,7 +58,7 @@ Leave the rest of the fields blank, and click "Save". It should then take you to
 
 ![](https://lh3.googleusercontent.com/YubtN4kG2LAHX3jx3vEyXed4MdikMx0wRupoeft-l3EHE7v5fD-zcWERt44tqLdDRVxjwjTKCWZ9NhSb6-BzC9Ohs-wBDd1WVv19AhvIPLEcHyRI4dA8a9SHm6Lg1w44ZgPuhydf)
 
-Leave the rest of the fields blank, and click "Save".
+Leave the rest of the fields blank or as they are, and click "Save".
 
 #### 5\. Preparing a custom software package (values to be changed)
 
