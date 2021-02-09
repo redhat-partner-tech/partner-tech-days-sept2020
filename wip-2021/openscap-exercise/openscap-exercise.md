@@ -72,9 +72,9 @@ In this part of the workshop, we will learn how to configure and perform an Open
 
 ![](https://lh5.googleusercontent.com/UH3-l8kGnC1UM20Op4_d0HZZ7upq84dechLxShPZZ4Ki-4P-bu8ej8sfUZIO-lxBXwdAx7MaIehy9I0NQt-w_DhzJdHBJnOfwRcYaY6Z2UUXsTY_eekbmDgvfq-2SLEIgqEvF7SG)
 
-![](https://lh5.googleusercontent.com/yW3YHJtQU1UkU6iJW6gn0i5BYKGPPYAayj3uZ-Qqcqd1yQQqICaHsQbkVYU1bgJhNEK0iUuX4r-cqP-CY8LtTkjT6III2jgw9isInpaJX6GM2pzhwomqTFw0xd6UcxQYMYFJtcpr)
-
 -   Once you're in Ansible Tower, you'll be able to see a dashboard.
+
+![](https://lh5.googleusercontent.com/yW3YHJtQU1UkU6iJW6gn0i5BYKGPPYAayj3uZ-Qqcqd1yQQqICaHsQbkVYU1bgJhNEK0iUuX4r-cqP-CY8LtTkjT6III2jgw9isInpaJX6GM2pzhwomqTFw0xd6UcxQYMYFJtcpr)
 
 #### 4\. Configuring an Ansible Tower template to run an OpenSCAP scan and launch the scan. (values to be changed)
 
